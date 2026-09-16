@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Creative Chakras is a full-spectrum design studio - branding, graphic design, motion, video editing, social, packaging and web. Sab kuch ek jagah.">
+<meta name="theme-color" content="#FFFDF5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Creative Chakras">
+<meta property="og:description" content="Creative Chakras is a full-spectrum design studio - branding, graphic design, motion, video editing, social, packaging and web. Sab kuch ek jagah.">
+<meta property="og:url" content="https://ajmalhasnain-ship-it.github.io/creative-chakras/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Creative Chakras">
+<meta name="twitter:description" content="Creative Chakras is a full-spectrum design studio - branding, graphic design, motion, video editing, social, packaging and web. Sab kuch ek jagah.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><circle cx='20' cy='20' r='17' fill='%23C8FF1E' stroke='%23121110' stroke-width='3'/><g stroke='%23121110' stroke-width='2.4'><line x1="26.00" y1="20.00" x2="36.00" y2="20.00"/><line x1="24.24" y1="24.24" x2="31.31" y2="31.31"/><line x1="20.00" y1="26.00" x2="20.00" y2="36.00"/><line x1="15.76" y1="24.24" x2="8.69" y2="31.31"/><line x1="14.00" y1="20.00" x2="4.00" y2="20.00"/><line x1="15.76" y1="15.76" x2="8.69" y2="8.69"/><line x1="20.00" y1="14.00" x2="20.00" y2="4.00"/><line x1="24.24" y1="15.76" x2="31.31" y2="8.69"/></g><circle cx='20' cy='20' r='4.6' fill='%23FF3DA5' stroke='%23121110' stroke-width='2.4'/></svg>">
+<title>Creative Chakras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Archivo:wght@400;500;600;700&family=Martian+Mono:wght@400;700&family=Baloo+2:wght@500;700;800&display=swap">
+
+<style>
+/* ==========================================================
+   CREATIVE CHAKRAS &#8212; riso sticker sheet
+   Fixed brand colours (same in both themes) + theme-aware
+   paper/ink so the neutral stretches flip cleanly.
+   ========================================================== */
+
+:root{
+  /* fixed brand ink &#8212; never flips */
+  --black:  #121110;
+  --white:  #FFFDF5;
+  --lime:   #C8FF1E;
+  --pink:   #FF3DA5;
+  --blue:   #2B37FF;
+  --yellow: #FFD400;
+  --violet: #7B2BFF;
+
+  /* theme-aware neutrals (light default) */
+  --bg:    #FFFDF5;
+  --fg:    #121110;
+  --card:  #FFFFFF;
+  --edge:  #121110;
+  --dim:   #6B6862;
+  --hair:  rgba(18,17,16,.14);
+
+  --f-disp: "Bricolage Grotesque","Archivo Black","Helvetica Neue",Arial,sans-serif;
+  --f-body: "Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-mono: "Martian Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --f-pop:  "Baloo 2","Noto Sans Devanagari",system-ui,sans-serif;
+
+  --pad: clamp(18px,4.5vw,64px);
+  --maxw: 1280px;
+  --edgew: 2.5px;
+  --pop: 6px 7px 0 var(--edge);
+  --pop-black: 6px 7px 0 var(--black);
+}
+
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:   #121110;
+    --fg:   #FFFDF5;
+    --card: #1D1B19;
+    --edge: #FFFDF5;
+    --dim:  #A39F97;
+    --hair: rgba(255,253,245,.18);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:   #121110;
+  --fg:   #FFFDF5;
+  --card: #1D1B19;
+  --edge: #FFFDF5;
+  --dim:  #A39F97;
+  --hair: rgba(255,253,245,.18);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family:var(--f-body);
+  font-size:16.5px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:6px}
+::selection{background:var(--lime);color:var(--black)}
+
+/* grain over everything */
+.grain{
+  position:fixed;inset:-50%;z-index:9999;pointer-events:none;opacity:.42;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+  mix-blend-mode:multiply;
+}
+:root[data-theme="dark"] .grain{mix-blend-mode:screen;opacity:.2}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .grain{mix-blend-mode:screen;opacity:.2}
+}
+
+/* ---------- type ---------- */
+.d1{
+  font-family:var(--f-disp);font-weight:800;
+  font-size:clamp(50px,12.5vw,168px);
+  line-height:.84;letter-spacing:-.035em;
+  text-transform:uppercase;margin:0;
+}
+.d2{
+  font-family:var(--f-disp);font-weight:800;
+  font-size:clamp(38px,7.6vw,104px);
+  line-height:.88;letter-spacing:-.032em;
+  text-transform:uppercase;margin:0;
+}
+.d3{
+  font-family:var(--f-disp);font-weight:700;
+  font-size:clamp(25px,3.3vw,40px);
+  line-height:.96;letter-spacing:-.022em;
+  text-transform:uppercase;margin:0;
+}
+.lede{font-size:clamp(16px,1.35vw,19.5px);line-height:1.55;max-width:56ch;margin:0}
+.lede b{font-weight:700}
+.tagmono{
+  font-family:var(--f-mono);font-size:10px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+}
+.hi{font-family:var(--f-pop);font-weight:700}
+
+/* ---------- sticker + buttons ---------- */
+.sticker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--f-mono);font-size:10px;font-weight:700;
+  letter-spacing:.13em;text-transform:uppercase;
+  background:var(--lime);color:var(--black);
+  border:var(--edgew) solid var(--black);
+  border-radius:999px;padding:8px 15px;
+  box-shadow:3px 4px 0 var(--black);
+  transform:rotate(-2deg);
+}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--f-disp);font-weight:800;font-size:16px;
+  letter-spacing:-.01em;text-transform:uppercase;
+  background:var(--pink);color:var(--white);
+  border:var(--edgew) solid var(--black);
+  border-radius:999px;padding:14px 26px;
+  box-shadow:var(--pop-black);cursor:pointer;
+  transition:transform .13s cubic-bezier(.3,1.4,.5,1),box-shadow .13s;
+  white-space:nowrap;
+}
+.btn:hover{transform:translate(-2px,-3px);box-shadow:8px 10px 0 var(--black)}
+.btn:active{transform:translate(3px,4px);box-shadow:2px 2px 0 var(--black)}
+.btn.lime{background:var(--lime);color:var(--black)}
+.btn.blue{background:var(--blue);color:var(--white)}
+.btn.plain{background:var(--card);color:var(--fg);border-color:var(--edge);box-shadow:var(--pop)}
+.btn.plain:hover{box-shadow:8px 10px 0 var(--edge)}
+.btn.plain:active{box-shadow:2px 2px 0 var(--edge)}
+.btn.sm{font-size:13.5px;padding:10px 18px;box-shadow:4px 5px 0 var(--black)}
+.btn.sm:hover{box-shadow:6px 7px 0 var(--black)}
+.btn .star{font-size:1.05em;line-height:0}
+@media(max-width:620px){
+  .nav-in{gap:10px;padding:0 16px}
+  .logo svg{width:29px;height:29px}
+  .logo b{font-size:18px}
+  .nav-right{gap:7px}
+  .tbtn{width:36px;height:36px}
+  .nav .btn.sm{padding:9px 14px;gap:6px}
+  .nav .btn.sm .long{display:none}
+}
+
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:var(--bg);
+  border-bottom:var(--edgew) solid var(--edge);
+}
+.nav-in{
+  max-width:var(--maxw);margin:0 auto;
+  padding:0 var(--pad);height:72px;
+  display:flex;align-items:center;gap:18px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex:none}
+.logo svg{width:34px;height:34px;flex:none}
+.logo .spin{animation:rot 9s linear infinite;transform-origin:20px 20px}
+@keyframes rot{to{transform:rotate(360deg)}}
+.logo b{
+  font-family:var(--f-disp);font-weight:800;font-size:21px;
+  letter-spacing:-.035em;text-transform:lowercase;line-height:1;
+}
+.logo b i{font-style:normal;color:var(--pink)}
+.nav-links{display:none;gap:3px;margin-left:auto}
+.nav-links a{
+  font-family:var(--f-mono);font-size:10.5px;font-weight:700;
+  letter-spacing:.11em;text-transform:uppercase;
+  padding:9px 13px;border-radius:999px;
+  border:2px solid transparent;
+  transition:background .15s,border-color .15s,color .15s;
+}
+.nav-links a:hover{background:var(--lime);color:var(--black);border-color:var(--black)}
+.nav-right{display:flex;align-items:center;gap:9px;margin-left:auto}
+@media(min-width:1000px){ .nav-links{display:flex} .nav-right{margin-left:16px} }
+.tbtn{
+  width:40px;height:40px;flex:none;cursor:pointer;
+  background:var(--yellow);color:var(--black);
+  border:var(--edgew) solid var(--black);border-radius:999px;
+  display:grid;place-items:center;
+  box-shadow:3px 4px 0 var(--black);
+  transition:transform .15s,box-shadow .15s;
+}
+.tbtn:hover{transform:rotate(-14deg) translateY(-2px);box-shadow:5px 6px 0 var(--black)}
+.tbtn svg{width:17px;height:17px}
+
+/* ---------- section scaffold ---------- */
+.sec{padding:clamp(56px,8vw,112px) 0;position:relative}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
+.sec.paper{background:var(--bg);color:var(--fg)}
+.sec.onlime{background:var(--lime);color:var(--black)}
+.sec.onblue{background:var(--blue);color:var(--white)}
+.sec.onyellow{background:var(--yellow);color:var(--black)}
+.sec.onpink{background:var(--pink);color:var(--white)}
+.sec.onlime,.sec.onblue,.sec.onyellow,.sec.onpink{border-top:var(--edgew) solid var(--black);border-bottom:var(--edgew) solid var(--black)}
+
+.head{display:grid;gap:16px;margin-bottom:clamp(30px,4.5vw,54px);max-width:min(100%,900px)}
+.head .lede{opacity:.88}
+
+/* ---------- marquee band ---------- */
+.bandwrap{overflow:hidden;position:relative;z-index:2}
+.band{
+  position:relative;z-index:2;
+  border-top:var(--edgew) solid var(--black);
+  border-bottom:var(--edgew) solid var(--black);
+  overflow:hidden;padding:13px 0;
+  width:112vw;margin-left:-6vw;
+}
+.band.a{background:var(--lime);color:var(--black);transform:rotate(-1.6deg);margin-top:-14px;margin-bottom:-14px}
+.band.b{background:var(--pink);color:var(--white);transform:rotate(1.4deg);margin-top:-14px;margin-bottom:-14px}
+.band.c{background:var(--violet);color:var(--white);transform:rotate(-1deg);margin-top:-14px;margin-bottom:-14px}
+.band-track{display:flex;width:max-content;align-items:center}
+.band.a .band-track{animation:mq 30s linear infinite}
+.band.b .band-track{animation:mq 26s linear infinite reverse}
+.band.c .band-track{animation:mq 34s linear infinite}
+.band:hover .band-track{animation-play-state:paused}
+.band-track span{
+  font-family:var(--f-disp);font-weight:800;
+  font-size:clamp(20px,2.4vw,30px);letter-spacing:-.02em;
+  text-transform:uppercase;padding:0 16px;
+  display:flex;align-items:center;gap:16px;white-space:nowrap;
+}
+.band-track span::after{content:"\273B";font-size:.8em;opacity:.75}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- hero ---------- */
+.hero{padding-top:clamp(36px,5vw,70px);padding-bottom:clamp(30px,4vw,56px)}
+.hero-grid{display:grid;gap:clamp(26px,4vw,54px);align-items:center}
+@media(min-width:960px){.hero-grid{grid-template-columns:1.06fr .94fr}}
+.hero h1 .l{display:block}
+.hero h1 .ko{color:var(--fg)}
+.hero h1 .gh{color:var(--pink);text-shadow:.038em .044em 0 var(--edge)}
+.hero-copy{display:grid;gap:22px;justify-items:start}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:8px}
+.fact{
+  font-family:var(--f-mono);font-size:10px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;
+  border:2px solid var(--edge);border-radius:999px;padding:7px 12px;
+}
+
+/* ---------- the wheel ---------- */
+.wheelbox{
+  position:relative;display:grid;place-items:center;
+  width:100%;max-width:470px;margin:0 auto;aspect-ratio:1/1;
+}
+.wheelbox svg{width:100%;height:100%;display:block}
+#wheelRot{transform-origin:200px 200px;cursor:grab}
+#wheelRot:active{cursor:grabbing}
+.wsector{stroke:var(--black);stroke-width:2.5}
+.wlabel{
+  font-family:var(--f-disp);font-weight:800;font-size:16px;
+  letter-spacing:-.01em;text-transform:uppercase;
+  pointer-events:none;
+}
+.whub{fill:var(--white);stroke:var(--black);stroke-width:3}
+.wneedle{fill:var(--black)}
+.spinbtn{
+  position:absolute;width:106px;height:106px;border-radius:999px;
+  background:var(--white);color:var(--black);
+  border:3px solid var(--black);cursor:pointer;
+  font-family:var(--f-disp);font-weight:800;font-size:19px;
+  text-transform:uppercase;letter-spacing:-.02em;
+  box-shadow:0 0 0 6px var(--white),5px 7px 0 6px var(--black);
+  transition:transform .14s cubic-bezier(.3,1.5,.5,1);
+  display:grid;place-items:center;line-height:.95;
+}
+.spinbtn:hover{transform:scale(1.07) rotate(-6deg)}
+.spinbtn:disabled{opacity:.55;cursor:wait}
+
+.wheel-side{display:grid;gap:20px;align-content:center}
+.result{
+  background:var(--card);color:var(--fg);
+  border:var(--edgew) solid var(--edge);border-radius:22px;
+  box-shadow:var(--pop);padding:24px 22px;
+  display:grid;gap:13px;min-height:238px;align-content:start;
+}
+@media(min-width:820px){
+  .result{grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);column-gap:34px;align-items:start}
+  .result .rleft,.result .rright{display:grid;gap:11px;align-content:start}
+}
+.result .rtop{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rdot{width:16px;height:16px;border-radius:999px;border:2px solid var(--edge);flex:none}
+.result h3{font-family:var(--f-disp);font-weight:800;font-size:clamp(27px,3.6vw,42px);
+  line-height:.94;letter-spacing:-.03em;text-transform:uppercase;margin:0}
+.result .rhi{font-family:var(--f-pop);font-weight:700;font-size:17px;color:var(--pink);margin:0}
+.result p{margin:0;color:var(--dim);font-size:15px;line-height:1.5}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{
+  font-family:var(--f-mono);font-size:9.5px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;border:2px solid var(--edge);border-radius:999px;
+  padding:5px 10px;
+}
+.pop-in{animation:popin .34s cubic-bezier(.2,1.5,.4,1)}
+@keyframes popin{from{opacity:0;transform:scale(.94) translateY(8px)}to{opacity:1;transform:none}}
+
+/* ---------- tiles ---------- */
+.tiles{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);margin-top:clamp(28px,4vw,46px)}
+@media(min-width:700px){.tiles{grid-template-columns:repeat(4,1fr)}}
+.tile{
+  font-family:var(--f-disp);font-weight:800;font-size:15px;
+  letter-spacing:-.02em;text-transform:uppercase;text-align:left;
+  background:var(--card);color:var(--fg);
+  border:var(--edgew) solid var(--edge);border-radius:16px;
+  padding:16px 14px;cursor:pointer;line-height:1.02;
+  box-shadow:4px 5px 0 var(--edge);
+  transition:transform .14s cubic-bezier(.3,1.4,.5,1),box-shadow .14s,background .14s,color .14s;
+  display:grid;gap:9px;
+}
+.tile span{font-family:var(--f-mono);font-size:9px;font-weight:700;letter-spacing:.1em;opacity:.6}
+.tile:hover{transform:translate(-2px,-3px) rotate(-1.4deg);box-shadow:7px 9px 0 var(--edge)}
+.tile.on{background:var(--pink);color:var(--white);border-color:var(--black);box-shadow:5px 6px 0 var(--black)}
+.tile.on span{opacity:.9}
+
+/* ---------- process ---------- */
+.steps{display:grid;gap:16px}
+@media(min-width:640px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{
+  background:var(--white);color:var(--black);
+  border:var(--edgew) solid var(--black);border-radius:22px;
+  box-shadow:var(--pop-black);padding:22px 20px;
+  display:grid;gap:10px;align-content:start;
+  transition:transform .16s cubic-bezier(.3,1.4,.5,1);
+}
+.step:hover{transform:translate(-3px,-4px) rotate(-1deg)}
+.step .n{
+  font-family:var(--f-disp);font-weight:800;font-size:46px;line-height:.8;
+  letter-spacing:-.05em;color:var(--blue);
+}
+.step h4{font-family:var(--f-disp);font-weight:800;font-size:26px;line-height:.98;
+  letter-spacing:-.03em;text-transform:uppercase;margin:0}
+.step .sh{font-family:var(--f-pop);font-weight:700;font-size:15px;color:var(--pink);margin:0}
+.step p{margin:0;font-size:14.5px;line-height:1.5;color:#4A4741}
+.step.wide{grid-column:1/-1}
+@media(min-width:1040px){.step.wide{grid-column:auto}}
+
+/* ---------- work ---------- */
+.work{display:grid;gap:16px}
+@media(min-width:680px){.work{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1060px){.work{grid-template-columns:repeat(3,1fr)}}
+.wcard{
+  background:var(--card);color:var(--fg);
+  border:var(--edgew) solid var(--edge);border-radius:22px;
+  box-shadow:var(--pop);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .16s cubic-bezier(.3,1.4,.5,1),box-shadow .16s;
+}
+.wcard:hover{transform:translate(-3px,-4px);box-shadow:9px 11px 0 var(--edge)}
+.wcard.hide{display:none}
+.wcard .plate{
+  height:150px;border-bottom:var(--edgew) solid var(--edge);
+  position:relative;display:grid;place-items:center;overflow:hidden;
+}
+.wcard .plate svg{width:118px;height:118px;animation:rot 16s linear infinite;transform-origin:50% 50%}
+.wcard .meta{padding:18px 18px 20px;display:flex;flex-direction:column;gap:9px;flex:1}
+.wcard h4{font-family:var(--f-disp);font-weight:800;font-size:25px;line-height:.98;
+  letter-spacing:-.03em;text-transform:uppercase;margin:0}
+.wcard p{margin:0;font-size:14.5px;line-height:1.5;color:var(--dim)}
+.wcard .tg{margin-top:auto;display:flex;flex-wrap:wrap;gap:6px;padding-top:4px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filter{
+  font-family:var(--f-mono);font-size:10px;font-weight:700;letter-spacing:.11em;
+  text-transform:uppercase;padding:9px 14px;border-radius:999px;cursor:pointer;
+  border:2px solid var(--edge);background:transparent;color:var(--fg);
+  transition:background .15s,color .15s,transform .15s;
+}
+.filter:hover{transform:translateY(-2px)}
+.filter.on{background:var(--fg);color:var(--bg)}
+
+/* ---------- stats ---------- */
+.stats{display:grid;gap:16px}
+@media(min-width:760px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{
+  background:var(--white);color:var(--black);
+  border:var(--edgew) solid var(--black);border-radius:22px;
+  box-shadow:var(--pop-black);padding:26px 22px;display:grid;gap:6px;
+}
+.stat .big{
+  font-family:var(--f-disp);font-weight:800;font-size:clamp(54px,7vw,84px);
+  line-height:.8;letter-spacing:-.05em;font-variant-numeric:tabular-nums;
+}
+.stat:nth-child(1) .big{color:var(--pink)}
+.stat:nth-child(2) .big{color:var(--blue)}
+.stat:nth-child(3) .big{color:var(--violet)}
+.stat p{margin:0;font-size:15px;line-height:1.45;color:#4A4741;max-width:28ch}
+
+/* ---------- voices ---------- */
+.voices{display:grid;gap:18px}
+@media(min-width:860px){.voices{grid-template-columns:repeat(3,1fr)}}
+.note{
+  border:var(--edgew) solid var(--black);border-radius:20px;
+  box-shadow:var(--pop-black);padding:22px 20px;
+  display:flex;flex-direction:column;gap:14px;color:var(--black);
+  transition:transform .16s cubic-bezier(.3,1.4,.5,1);
+}
+.note:nth-child(1){background:var(--lime);transform:rotate(-1.6deg)}
+.note:nth-child(2){background:var(--yellow);transform:rotate(1.2deg)}
+.note:nth-child(3){background:var(--pink);color:var(--white);transform:rotate(-.8deg)}
+.note:hover{transform:rotate(0deg) translateY(-4px)}
+.note .q{font-family:var(--f-disp);font-weight:700;font-size:20px;line-height:1.16;
+  letter-spacing:-.02em;margin:0}
+.note .who{margin-top:auto;display:grid;gap:2px}
+.note .who b{font-size:13.5px;font-weight:700}
+.note .who em{font-style:normal;font-family:var(--f-mono);font-size:9.5px;
+  letter-spacing:.1em;text-transform:uppercase;opacity:.8}
+
+/* ---------- plans ---------- */
+.plans{display:grid;gap:16px}
+@media(min-width:900px){.plans{grid-template-columns:repeat(3,1fr)}}
+.plan{
+  background:var(--card);color:var(--fg);
+  border:var(--edgew) solid var(--edge);border-radius:22px;
+  box-shadow:var(--pop);padding:24px 22px;
+  display:flex;flex-direction:column;gap:13px;
+}
+.plan.feat{background:var(--blue);color:var(--white);border-color:var(--black);box-shadow:var(--pop-black)}
+.plan .pt{font-family:var(--f-mono);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.plan h4{font-family:var(--f-disp);font-weight:800;font-size:30px;line-height:.98;
+  letter-spacing:-.03em;text-transform:uppercase;margin:0}
+.plan .ph{font-family:var(--f-pop);font-weight:700;font-size:15.5px;margin:0;opacity:.85}
+.plan>p{margin:0;font-size:14.5px;line-height:1.52;opacity:.82}
+.plan ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;margin-top:auto;padding-top:8px}
+.plan li{font-size:14px;line-height:1.42;padding-left:20px;position:relative;opacity:.9}
+.plan li::before{content:"\2192";position:absolute;left:0;font-weight:700}
+
+/* ---------- CTA ---------- */
+.cta{position:relative;overflow:hidden}
+.cta .wrap{display:grid;gap:26px;justify-items:start;position:relative;z-index:2}
+.mailto{
+  font-family:var(--f-disp);font-weight:800;
+  font-size:clamp(22px,3.6vw,48px);letter-spacing:-.035em;
+  text-transform:uppercase;line-height:1;
+  background:var(--lime);color:var(--black);
+  border:var(--edgew) solid var(--black);border-radius:999px;
+  padding:14px 26px;box-shadow:var(--pop-black);
+  display:inline-block;word-break:break-word;
+  transition:transform .14s cubic-bezier(.3,1.4,.5,1),box-shadow .14s;
+}
+.mailto:hover{transform:translate(-3px,-4px) rotate(-1.5deg);box-shadow:9px 11px 0 var(--black)}
+.badge{
+  position:absolute;right:calc(var(--pad) - 6px);top:clamp(24px,5vw,64px);
+  width:clamp(104px,13vw,160px);height:clamp(104px,13vw,160px);z-index:3;
+  pointer-events:none;
+}
+.badge svg{width:100%;height:100%;animation:rot 13s linear infinite}
+.badge text{font-family:var(--f-mono);font-size:12.2px;font-weight:700;letter-spacing:.14em;fill:var(--white)}
+@media(max-width:820px){.badge{position:static;margin-bottom:-6px}}
+
+/* ---------- footer ---------- */
+.foot{background:var(--black);color:var(--white);border-top:var(--edgew) solid var(--black)}
+.foot-in{max-width:var(--maxw);margin:0 auto;padding:52px var(--pad) 30px;display:grid;gap:34px}
+@media(min-width:880px){.foot-in{grid-template-columns:1.5fr 1fr 1fr 1fr}}
+.foot h5{font-family:var(--f-mono);font-size:10px;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;margin:0 0 14px;opacity:.55}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.foot li a{font-size:14.5px;opacity:.85;transition:color .15s,opacity .15s}
+.foot li a:hover{color:var(--lime);opacity:1}
+.foot .logo b{color:var(--white)}
+.foot .fblurb{font-size:14.5px;opacity:.7;max-width:32ch;margin:12px 0 0}
+.foot-bot{
+  border-top:1px solid rgba(255,253,245,.18);
+  max-width:var(--maxw);margin:0 auto;padding:16px var(--pad) 26px;
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
+}
+.foot-bot span{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
+.foot-bot .hi{font-family:var(--f-pop);font-size:15px;letter-spacing:0;text-transform:none;opacity:.8;color:var(--lime)}
+
+/* ---------- cursor chakra ---------- */
+.cursor{
+  position:fixed;left:0;top:0;width:26px;height:26px;z-index:9998;
+  pointer-events:none;opacity:0;transition:opacity .25s;
+  will-change:transform;
+}
+.cursor svg{width:100%;height:100%;animation:rot 3.5s linear infinite}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(20px)}
+.rv.in{opacity:1;transform:none;
+  transition:opacity .55s cubic-bezier(.2,.8,.3,1),transform .55s cubic-bezier(.2,.8,.3,1)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;
+    transition-duration:.001ms !important}
+  .rv{opacity:1;transform:none}
+  .cursor{display:none}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true">
+  <svg viewBox="0 0 40 40">
+    <circle cx="20" cy="20" r="17" fill="#FF3DA5" stroke="#121110" stroke-width="3"/>
+    <g stroke="#121110" stroke-width="2.4" id="curSpokes"></g>
+    <circle cx="20" cy="20" r="4" fill="#C8FF1E" stroke="#121110" stroke-width="2"/>
+  </svg>
+</div>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top" aria-label="Creative Chakras, home">
+      <svg viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="17.2" fill="#C8FF1E" stroke="#121110" stroke-width="3"/>
+        <g class="spin" stroke="#121110" stroke-width="2.4" id="logoSpokes"></g>
+        <circle cx="20" cy="20" r="4.6" fill="#FF3DA5" stroke="#121110" stroke-width="2.4"/>
+      </svg>
+      <b>creative <i>chakras</i></b>
+    </a>
+    <div class="nav-links">
+      <a href="#chakra">sab kuch</a>
+      <a href="#tarika">tarika</a>
+      <a href="#kaam">kaam</a>
+      <a href="#paise">paise</a>
+    </div>
+    <div class="nav-right">
+      <button class="tbtn" id="themeBtn" type="button" aria-label="Switch colour theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2.4v2.4M12 19.2v2.4M2.4 12h2.4M19.2 12h2.4M5.2 5.2l1.7 1.7M17.1 17.1l1.7 1.7M18.8 5.2 17.1 6.9M6.9 17.1 5.2 18.8"/>
+        </svg>
+      </button>
+      <a class="btn sm" href="#baat"><span class="star">&#10022;</span>baat<span class="long">&nbsp;karo</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="sec paper hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="sticker">&#9733; naye kaam ke liye open &#9733;</span>
+        <h1 class="d1">
+          <span class="l ko">chakra</span>
+          <span class="l gh">ghumao.</span>
+        </h1>
+        <p class="lede">
+          Logo se lekar launch film tak &#8212; <b>design, edit, motion, social.</b>
+          Sab kuch ek chhat ke neeche, ek hi team ke haath mein.
+          Paanch vendors, paanch kahaniyan? Woh yahan nahi hota.
+        </p>
+        <div class="hero-ctas">
+          <a class="btn" href="#baat"><span class="star">&#10022;</span>kaam shuru karo</a>
+          <a class="btn plain" href="#kaam">kaam dekho</a>
+        </div>
+        <div class="hero-facts">
+          <span class="fact">08 cheezein</span>
+          <span class="fact">01 team</span>
+          <span class="fact">48 ghante mein reply</span>
+          <span class="fact">0 vendor drama</span>
+        </div>
+      </div>
+
+      <div class="wheel-side">
+        <div class="wheelbox">
+          <svg viewBox="0 0 400 400" role="img" aria-label="Service wheel. Spin it to pick a discipline.">
+            <g id="wheelRot">
+              <g id="wheelSectors"></g>
+            </g>
+            <circle class="whub" cx="200" cy="200" r="54"/>
+            <polygon class="wneedle" points="200,8 214,44 186,44"/>
+          </svg>
+          <button class="spinbtn" id="spinBtn" type="button">ghumao</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bandwrap" aria-hidden="true"><div class="band a"><div class="band-track" id="bandA"></div></div></div>
+
+<!-- ================= CHAKRA / SERVICES ================= -->
+<section class="sec paper" id="chakra">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="tagmono" style="color:var(--pink)">&#9679; spin karo</span>
+      <h2 class="d2">kya banwana hai?</h2>
+      <p class="lede">
+        Chakra ghumao, ya seedha tile pe click karo. Aath cheezein &#8212; sab in-house,
+        sab ek doosre se baat karti hui.
+      </p>
+    </div>
+
+    <div class="result rv" id="result" aria-live="polite"></div>
+
+    <div class="tiles rv" id="tiles"></div>
+  </div>
+</section>
+
+<div class="bandwrap" aria-hidden="true"><div class="band b"><div class="band-track" id="bandB"></div></div></div>
+
+<!-- ================= PROCESS ================= -->
+<section class="sec onblue" id="tarika">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="tagmono" style="color:var(--lime)">&#9679; tarika</span>
+      <h2 class="d2">paanch step.<br>zero confusion.</h2>
+      <p class="lede">
+        Har project isi chakkar mein ghoomta hai. Aakhri step wapas pehle pe le jaata hai
+        &#8212; isliye kaam kabhi rukta nahi.
+      </p>
+    </div>
+    <div class="steps rv">
+      <div class="step">
+        <div class="n">01</div>
+        <h4>suno</h4>
+        <p class="sh">&#2360;&#2369;&#2344;&#2379;</p>
+        <p>Pehle baithte hain &#8212; aap, aapki team, aur ho sake to aapke customers ke saath.
+           Koi deck nahi, koi template nahi. Sirf ek sach dhoondhte hain.</p>
+      </div>
+      <div class="step">
+        <div class="n">02</div>
+        <h4>socho</h4>
+        <p class="sh">&#2360;&#2379;&#2330;&#2379;</p>
+        <p>Positioning, tone, kya bolna hai aur kya bilkul nahi. Yeh sign-off ho gaya to
+           aage ke saare jhagde apne aap khatam.</p>
+      </div>
+      <div class="step">
+        <div class="n">03</div>
+        <h4>banao</h4>
+        <p class="sh">&#2348;&#2344;&#2366;&#2323;</p>
+        <p>Identity, type, colour, packaging, screens &#8212; system bana ke dete hain,
+           ek-off files nahi. Aapki team khud aage badha sake.</p>
+      </div>
+      <div class="step">
+        <div class="n">04</div>
+        <h4>chalao</h4>
+        <p class="sh">&#2330;&#2354;&#2366;&#2323;</p>
+        <p>Ab sab kuch chalta hai: film, edits, animation, launch campaign, pehle 90 din
+           ka content. Brand file se nikal ke duniya mein.</p>
+      </div>
+      <div class="step">
+        <div class="n">05</div>
+        <h4>badhao</h4>
+        <p class="sh">&#2348;&#2338;&#2364;&#2366;&#2323;</p>
+        <p>Har mahine output, har quarter review, aur seedhi baat ki kya chala kya nahi.
+           Phir wapas step 01 &#8212; is baar data ke saath.</p>
+      </div>
+      <div class="step wide" style="background:var(--lime)">
+        <div class="n" style="color:var(--pink)">&#8734;</div>
+        <h4>aur phir<br>dobara</h4>
+        <p class="sh">&#2330;&#2325;&#2381;&#2352; &#2330;&#2354;&#2340;&#2366; &#2352;&#2361;&#2375;</p>
+        <p>Chakra ka matlab hi yahi hai. Ek cycle khatam, agla shuru &#8212; har baar
+           thoda tez, thoda behtar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORK ================= -->
+<section class="sec paper" id="kaam">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="tagmono" style="color:var(--blue)">&#9679; kaam</span>
+      <h2 class="d2">baatein kam,<br>kaam zyada.</h2>
+      <p class="lede">Filter karo us cheez se jisne project lead kiya. Zyadatar ne chaar-paanch
+         spokes ek saath use kiye.</p>
+    </div>
+    <div class="filters rv" id="filters"></div>
+    <div class="work rv" id="workGrid"></div>
+  </div>
+</section>
+
+<div class="bandwrap" aria-hidden="true"><div class="band c"><div class="band-track" id="bandC"></div></div></div>
+
+<!-- ================= STATS ================= -->
+<section class="sec onyellow">
+  <div class="wrap">
+    <div class="stats rv">
+      <div class="stat">
+        <div class="big">08</div>
+        <p>Cheezein in-house. Beech mein koi vendor nahi, isliye kuch kho nahi sakta.</p>
+      </div>
+      <div class="stat">
+        <div class="big">48h</div>
+        <p>Har live project pe reply ki max limit &#8212; launch se pehle weekend bhi.</p>
+      </div>
+      <div class="stat">
+        <div class="big">01</div>
+        <p>Ek hi banda kickoff se delivery tak aapke brand pe. Har baar nayi shakal nahi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VOICES ================= -->
+<section class="sec paper">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="tagmono" style="color:var(--violet)">&#9679; log kya kehte hain</span>
+      <h2 class="d2">humse behtar<br>inhone kaha.</h2>
+    </div>
+    <div class="voices rv">
+      <div class="note">
+        <p class="q">&#8220;Aaye the logo ke liye, le ke gaye poora brand &#8212; ab sales team
+          khud samjha paati hai ki hum hain kya.&#8221;</p>
+        <div class="who"><b>Founder</b><em>D2C skincare &#183; Mumbai</em></div>
+      </div>
+      <div class="note">
+        <p class="q">&#8220;Film, packaging aur feed &#8212; teeno ek hi kamre se nikle.
+          Dikhta hai: sab kuch aapas mein match karta hai.&#8221;</p>
+        <div class="who"><b>Marketing lead</b><em>Beverage brand &#183; Delhi NCR</em></div>
+      </div>
+      <div class="note">
+        <p class="q">&#8220;Inhone humare board se zyada mushkil sawaal poochhe.
+          Kaam usi wajah se behtar nikla.&#8221;</p>
+        <div class="who"><b>Head of growth</b><em>Fintech &#183; Bengaluru</em></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLANS ================= -->
+<section class="sec paper" id="paise">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="tagmono" style="color:var(--pink)">&#9679; paise ki baat</span>
+      <h2 class="d2">teen tareeke.<br>koi chhupi baat nahi.</h2>
+      <p class="lede">Teeno mein se kuch fit nahi baithta? Pehli call pe bol dijiye &#8212;
+         model pehle bhi badla hai, phir badal denge.</p>
+    </div>
+    <div class="plans rv">
+      <div class="plan">
+        <span class="pt">01 &#183; sprint</span>
+        <h4>do hafte.<br>ek kaam.</h4>
+        <p class="ph">&#2340;&#2375;&#2332;&#2364; &#2324;&#2352; &#2360;&#2368;&#2343;&#2366;</p>
+        <p>Ek hi deliverable pe tez burst &#8212; launch film, packaging refresh, ya campaign
+           ka key visual.</p>
+        <ul>
+          <li>Pehle se scope aur price, dono fix</li>
+          <li>Ek discipline lead, baaki support</li>
+          <li>Do review rounds andar hi</li>
+          <li>Din 14 pe files aur source handover</li>
+        </ul>
+      </div>
+      <div class="plan feat">
+        <span class="pt">02 &#183; project</span>
+        <h4>shuru se<br>launch tak.</h4>
+        <p class="ph">&#2346;&#2370;&#2352;&#2366; &#2325;&#2366;&#2350;</p>
+        <p>Poora arc: strategy, identity, uska system, aur woh content jo usse market tak
+           le jaata hai.</p>
+        <ul>
+          <li>Chhah se baarah hafte, phases mein</li>
+          <li>Poori team aapke brand pe</li>
+          <li>Brand book aur chalte-firte templates</li>
+          <li>Film, print aur social ke launch assets</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <span class="pt">03 &#183; retainer</span>
+        <h4>aapki design<br>team, on call.</h4>
+        <p class="ph">&#2361;&#2352; &#2350;&#2361;&#2368;&#2344;&#2375;</p>
+        <p>Har mahine studio time un brands ke liye jo lagataar ship karte hain aur quality
+           girne nahi de sakte.</p>
+        <ul>
+          <li>Monthly hours, kisi bhi discipline mein</li>
+          <li>Shared calendar aur content plan</li>
+          <li>Live campaigns pe priority turnaround</li>
+          <li>Har quarter brand health review</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="sec onblue cta" id="baat">
+  <div class="badge" aria-hidden="true">
+    <svg viewBox="0 0 200 200">
+      <defs><path id="badgePath" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+      <circle cx="100" cy="100" r="92" fill="#FF3DA5" stroke="#121110" stroke-width="4"/>
+      <circle cx="100" cy="100" r="50" fill="#C8FF1E" stroke="#121110" stroke-width="4"/>
+      <text><textPath href="#badgePath" startOffset="0%">&#9733; chalo shuru karein &#9733; baat karte hain &#9733;</textPath></text>
+    </svg>
+  </div>
+  <div class="wrap">
+    <span class="tagmono rv" style="color:var(--lime)">&#9679; aakhri baat</span>
+    <h2 class="d1 rv" style="max-width:14ch">kaam ki<br>baat karein?</h2>
+    <p class="lede rv" style="opacity:.9">
+      Ek line bhej dijiye &#8212; brand kya hai, deadline kya hai, budget kitna hai.
+      Jawab ek insaan dega, form ki receipt nahi. Do working days ke andar.
+    </p>
+    <a class="mailto rv" href="mailto:hello@creativechakras.com">hello@creativechakras.com</a>
+    <div class="hero-ctas rv">
+      <a class="btn lime" href="mailto:hello@creativechakras.com"><span class="star">&#10022;</span>email bhejo</a>
+      <a class="btn plain" href="tel:+910000000000" style="background:var(--white);color:var(--black);border-color:var(--black);box-shadow:var(--pop-black)">+91 00000 00000</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="foot">
+  <div class="foot-in">
+    <div>
+      <a class="logo" href="#top">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="17.2" fill="#C8FF1E" stroke="#121110" stroke-width="3"/>
+          <g class="spin" stroke="#121110" stroke-width="2.4" id="logoSpokes2"></g>
+          <circle cx="20" cy="20" r="4.6" fill="#FF3DA5" stroke="#121110" stroke-width="2.4"/>
+        </svg>
+        <b>creative <i>chakras</i></b>
+      </a>
+      <p class="fblurb">Ek independent creative studio. Design, edit, motion, social &#8212;
+        sab kuch ek jagah.</p>
+    </div>
+    <div>
+      <h5>studio</h5>
+      <ul>
+        <li><a href="#chakra">sab kuch</a></li>
+        <li><a href="#tarika">tarika</a></li>
+        <li><a href="#paise">paise</a></li>
+        <li><a href="#baat">baat karo</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>kaam</h5>
+      <ul>
+        <li><a href="#kaam">selected work</a></li>
+        <li><a href="#kaam">branding</a></li>
+        <li><a href="#kaam">motion &amp; film</a></li>
+        <li><a href="#kaam">social</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>kahin aur</h5>
+      <ul>
+        <li><a href="#baat">instagram</a></li>
+        <li><a href="#baat">behance</a></li>
+        <li><a href="#baat">linkedin</a></li>
+        <li><a href="mailto:hello@creativechakras.com">hello@creativechakras.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>&#169; 2026 creative chakras</span>
+    <span class="hi">&#2332;&#2379; &#2330;&#2354;&#2340;&#2366; &#2361;&#2376;, &#2357;&#2361;&#2368; &#2348;&#2338;&#2364;&#2340;&#2366; &#2361;&#2376;&#2404;</span>
+    <span>khud banaya, khud code kiya</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var root = document.documentElement;
+
+  /* ---------- theme ---------- */
+  function isLight(){
+    var s = root.getAttribute("data-theme");
+    if (s) return s === "light";
+    return !window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+  document.getElementById("themeBtn").addEventListener("click", function(){
+    root.setAttribute("data-theme", isLight() ? "dark" : "light");
+  });
+
+  /* ---------- spokes in the little marks ---------- */
+  ["logoSpokes","logoSpokes2","curSpokes"].forEach(function(id){
+    var g = document.getElementById(id); if(!g) return;
+    var s = "";
+    for (var i=0;i<8;i++){
+      var a = i*45*Math.PI/180;
+      s += '<line x1="'+(20+Math.cos(a)*6).toFixed(2)+'" y1="'+(20+Math.sin(a)*6).toFixed(2)+
+           '" x2="'+(20+Math.cos(a)*16).toFixed(2)+'" y2="'+(20+Math.sin(a)*16).toFixed(2)+'"/>';
+    }
+    g.innerHTML = s;
+  });
+
+  /* ---------- marquee bands ---------- */
+  function band(el, items){
+    var one = items.map(function(t){ return "<span>"+t+"</span>"; }).join("");
+    el.innerHTML = one + one;
+  }
+  band(document.getElementById("bandA"),
+    ["graphic design","video editing","motion design","social media","branding","packaging","web &amp; ui","content"]);
+  band(document.getElementById("bandB"),
+    ["sab kuch ek jagah","ek team","zero handoff","48 ghante mein reply","made in india","kaam bolta hai"]);
+  band(document.getElementById("bandC"),
+    ["chakra ghoomta rahe","brand chalta rahe","rukna mana hai","aur tez","aur saaf","aur zinda"]);
+
+  /* ---------- the wheel ---------- */
+  var SERVICES = [
+    { short:"branding", name:"branding",   hi:"&#2346;&#2361;&#2330;&#2366;&#2344;",
+      blurb:"Naam, positioning, logo system aur woh rules jo sab ko imaandaar rakhte hain.",
+      items:["naming","logo &amp; wordmark","type &amp; colour","brand guidelines","iconography","brand architecture"] },
+    { short:"graphics", name:"graphic design", hi:"&#2352;&#2379;&#2395; &#2325;&#2366; &#2325;&#2366;&#2350;",
+      blurb:"Har hafte ka output &#8212; campaign keys, decks, posters, jo bhi chahiye.",
+      items:["campaign key visuals","posters &amp; ooh","pitch decks","reports","infographics","merch"] },
+    { short:"motion", name:"motion",     hi:"&#2361;&#2367;&#2354;&#2340;&#2366;-&#2337;&#2369;&#2354;&#2340;&#2366;",
+      blurb:"Logo stings, explainers, title systems, 2D aur 3D &#8212; brand chalta hua.",
+      items:["logo animation","2d &amp; cel","3d &amp; renders","explainers","kinetic type","ui motion"] },
+    { short:"video", name:"video edit",  hi:"&#2325;&#2335;&#2366;&#2312;-&#2331;&#2306;&#2335;&#2366;&#2312;",
+      blurb:"Raw footage se final cut tak: kahani, pace, sound, colour, har ratio.",
+      items:["long-form","reels &amp; shorts","ad films","colour grade","sound mix","subtitles"] },
+    { short:"social", name:"social",     hi:"&#2352;&#2379;&#2395; &#2325;&#2368; &#2348;&#2366;&#2340;",
+      blurb:"Calendar, formats aur hooks &#8212; ek system jo bina toote chalta rahe.",
+      items:["content strategy","monthly calendar","format systems","copywriting","tone guide","reporting"] },
+    { short:"shoots", name:"production", hi:"&#2358;&#2370;&#2335;&#2367;&#2306;&#2327;",
+      blurb:"Shoot poora handle &#8212; crew, set, direction, aur card se jo bhi nikle.",
+      items:["photo &amp; video","product stills","founder films","scripting","casting","asset library"] },
+    { short:"packaging", name:"packaging",  hi:"&#2337;&#2367;&#2348;&#2381;&#2348;&#2366;-&#2337;&#2367;&#2395;&#2366;&#2311;&#2344;",
+      blurb:"Structure, label, dielines aur press &#8212; shelf ke liye bhi, printer ke liye bhi.",
+      items:["primary &amp; secondary","dielines","label systems","press files","press checks","unboxing"] },
+    { short:"web", name:"web &amp; ui",   hi:"&#2360;&#2381;&#2325;&#2381;&#2352;&#2368;&#2344; &#2346;&#2352;",
+      blurb:"Sites aur product screens jahan identity browser mein bhi zinda rehti hai.",
+      items:["marketing sites","landing pages","design systems","product ux","prototypes","handoff"] }
+  ];
+  var WCOL = ["#C8FF1E","#FF3DA5","#2B37FF","#FFD400","#7B2BFF","#C8FF1E","#FF3DA5","#2B37FF"];
+  var WTXT = ["#121110","#FFFDF5","#FFFDF5","#121110","#FFFDF5","#121110","#FFFDF5","#FFFDF5"];
+  var N = SERVICES.length, STEP = 360/N;
+
+  var sectorsG = document.getElementById("wheelSectors");
+  var rotG     = document.getElementById("wheelRot");
+  var spinBtn  = document.getElementById("spinBtn");
+  var resultEl = document.getElementById("result");
+  var tilesEl  = document.getElementById("tiles");
+
+  function pt(cx, cy, r, deg){
+    var a = (deg - 90) * Math.PI/180;
+    return [cx + r*Math.cos(a), cy + r*Math.sin(a)];
+  }
+  (function buildWheel(){
+    var R = 192, s = "";
+    for (var i=0;i<N;i++){
+      var a0 = i*STEP, a1 = (i+1)*STEP;
+      var p0 = pt(200,200,R,a0), p1 = pt(200,200,R,a1);
+      s += '<path class="wsector" fill="'+WCOL[i]+'" d="M200,200 L'+p0[0].toFixed(2)+','+p0[1].toFixed(2)+
+           ' A'+R+','+R+' 0 0,1 '+p1[0].toFixed(2)+','+p1[1].toFixed(2)+' Z"/>';
+      var mid = a0 + STEP/2;
+      var lp = pt(200,200,128,mid);
+      /* flip the bottom half so no label reads upside-down */
+      var lrot = (mid > 90 && mid < 270) ? mid + 180 : mid;
+      s += '<text class="wlabel" x="'+lp[0].toFixed(2)+'" y="'+lp[1].toFixed(2)+
+           '" fill="'+WTXT[i]+'" text-anchor="middle" dominant-baseline="central" '+
+           'transform="rotate('+lrot+','+lp[0].toFixed(2)+','+lp[1].toFixed(2)+')">'+
+           SERVICES[i].short+'</text>';
+    }
+    sectorsG.innerHTML = s;
+  })();
+
+  var rot = 0, spinning = false, active = -1;
+
+  function setActive(i, animate){
+    active = i;
+    var s = SERVICES[i];
+    resultEl.innerHTML =
+      '<div class="rleft">'+
+        '<div class="rtop">'+
+          '<span class="rdot" style="background:'+WCOL[i]+'"></span>'+
+          '<span class="tagmono" style="opacity:.6">spoke 0'+(i+1)+' / 08</span>'+
+        '</div>'+
+        '<h3>'+s.name+'</h3>'+
+        '<p class="rhi">'+s.hi+'</p>'+
+      '</div>'+
+      '<div class="rright">'+
+        '<p>'+s.blurb+'</p>'+
+        '<div class="chips">'+ s.items.map(function(x){return '<span class="chip">'+x+'</span>';}).join("") +'</div>'+
+      '</div>';
+    if (animate && !reduce){
+      resultEl.classList.remove("pop-in");
+      void resultEl.offsetWidth;
+      resultEl.classList.add("pop-in");
+    }
+    Array.prototype.forEach.call(tilesEl.children, function(t,k){ t.classList.toggle("on", k===i); });
+  }
+
+  function easeOut(t){ return 1 - Math.pow(1-t, 3); }
+
+  function spinTo(i){
+    if (spinning) return;
+    if (reduce){ rot = -(i*STEP + STEP/2); rotG.style.transform = "rotate("+rot+"deg)"; setActive(i,false); return; }
+    spinning = true; spinBtn.disabled = true;
+    var wantMod = ((360 - (i*STEP + STEP/2)) % 360 + 360) % 360;
+    var curMod  = ((rot % 360) + 360) % 360;
+    var delta   = ((wantMod - curMod) % 360 + 360) % 360;
+    var from = rot, to = rot + 360*4 + delta;
+    var dur = 3400, t0 = performance.now();
+    var settled = false;
+    function settle(){
+      if (settled) return;
+      settled = true;
+      rot = to; rotG.style.transform = "rotate("+rot+"deg)";
+      spinning = false; spinBtn.disabled = false; setActive(i, true);
+    }
+    setTimeout(settle, dur + 250);   /* rAF can be starved in a background tab */
+    (function step(now){
+      var p = Math.min(1, (now - t0)/dur);
+      rot = from + (to - from) * easeOut(p);
+      rotG.style.transform = "rotate("+rot+"deg)";
+      if (p < 1){ requestAnimationFrame(step); }
+      else { settle(); }
+    })(t0);
+  }
+
+  spinBtn.addEventListener("click", function(){
+    var i; do { i = Math.floor(Math.random()*N); } while (N > 1 && i === active);
+    spinTo(i);
+  });
+  rotG.addEventListener("click", function(){ if (!spinning) spinBtn.click(); });
+
+  tilesEl.innerHTML = SERVICES.map(function(s,i){
+    return '<button class="tile" type="button" data-i="'+i+'">'+
+             '<span>0'+(i+1)+'</span>'+ s.name +
+           '</button>';
+  }).join("");
+  tilesEl.addEventListener("click", function(e){
+    var b = e.target.closest(".tile"); if (b) spinTo(+b.dataset.i);
+  });
+
+  setActive(0, false);
+  rotG.style.transform = "rotate("+(-(0*STEP + STEP/2))+"deg)";
+  rot = -(0*STEP + STEP/2);
+
+  /* ---------- work ---------- */
+  var PROJECTS = [
+    { t:"slow skin", cat:"branding", col:"#FF3DA5",
+      d:"Skincare label formulation se upar tak dobara bana &#8212; naam, identity, packaging system aur launch film.",
+      tags:["identity","packaging","film"] },
+    { t:"bharat bean", cat:"packaging", col:"#C8FF1E",
+      d:"Single-origin coffee, baarah SKU, ek hi shelf language. Dielines, labels, press files &#8212; chhah hafte.",
+      tags:["packaging","print","art direction"] },
+    { t:"tarang ev", cat:"motion", col:"#2B37FF",
+      d:"EV brand ko chalta hua dikhna tha. Identity hi is hisaab se bani ki har mark animate ho sake.",
+      tags:["motion","identity","3d"] },
+    { t:"paisa sahi", cat:"social", col:"#FFD400",
+      d:"Navve din ka finance content jo log poora dekh gaye. Format system, hooks, calendar, reporting.",
+      tags:["social","editing","copy"] },
+    { t:"anaar hospitality", cat:"branding", col:"#7B2BFF",
+      d:"Paanch properties, ek bhi shared awaaz nahi. Ek architecture, paanch shakhsiyat, zero confusion.",
+      tags:["identity","print","interiors"] },
+    { t:"kshitij studio", cat:"web", col:"#FF3DA5",
+      d:"Architecture practice ka portfolio &#8212; shaant, tez, aur aisa ki nayi project woh khud daal sakein.",
+      tags:["web","ui","design system"] }
+  ];
+
+  function plate(col, seed){
+    var s = '', n = 6 + (seed % 5);
+    for (var i=0;i<n;i++){
+      var a = i*(360/n) + seed*7;
+      var rad = a*Math.PI/180;
+      s += '<line x1="60" y1="60" x2="'+(60+Math.cos(rad)*52).toFixed(1)+'" y2="'+(60+Math.sin(rad)*52).toFixed(1)+
+           '" stroke="#121110" stroke-width="5" stroke-linecap="round"/>';
+    }
+    return '<svg viewBox="0 0 120 120" aria-hidden="true">'+
+             '<circle cx="60" cy="60" r="55" fill="'+col+'" stroke="#121110" stroke-width="5"/>'+ s +
+             '<circle cx="60" cy="60" r="13" fill="#FFFDF5" stroke="#121110" stroke-width="5"/>'+
+           '</svg>';
+  }
+
+  var grid = document.getElementById("workGrid");
+  grid.innerHTML = PROJECTS.map(function(p,i){
+    return '<article class="wcard" data-cat="'+p.cat+'">'+
+      '<div class="plate" style="background:'+p.col+'">'+ plate(p.col, i*9+5) +'</div>'+
+      '<div class="meta">'+
+        '<span class="tagmono" style="opacity:.55">'+p.cat+'</span>'+
+        '<h4>'+p.t+'</h4>'+
+        '<p>'+p.d+'</p>'+
+        '<div class="tg">'+ p.tags.map(function(t){return '<span class="chip">'+t+'</span>';}).join("") +'</div>'+
+      '</div>'+
+    '</article>';
+  }).join("");
+
+  var cats = ["sab"].concat(PROJECTS.map(function(p){return p.cat;})
+    .filter(function(v,i,a){return a.indexOf(v)===i;}));
+  var fl = document.getElementById("filters");
+  fl.innerHTML = cats.map(function(c,i){
+    return '<button class="filter'+(i===0?' on':'')+'" type="button" data-cat="'+c+'">'+c+'</button>';
+  }).join("");
+  fl.addEventListener("click", function(e){
+    var b = e.target.closest(".filter"); if (!b) return;
+    Array.prototype.forEach.call(fl.children, function(x){ x.classList.toggle("on", x===b); });
+    var c = b.dataset.cat;
+    Array.prototype.forEach.call(grid.children, function(card){
+      card.classList.toggle("hide", c!=="sab" && card.dataset.cat!==c);
+    });
+  });
+
+  /* ---------- reveal (no rAF dependency) ---------- */
+  var pending = Array.prototype.slice.call(document.querySelectorAll(".rv"));
+  function checkReveal(){
+    if (!pending.length) return;
+    var edge = window.innerHeight * 0.94;
+    pending = pending.filter(function(el){
+      if (el.getBoundingClientRect().top < edge){ el.classList.add("in"); return false; }
+      return true;
+    });
+  }
+  if (reduce){
+    pending.forEach(function(el){ el.classList.add("in"); });
+    pending = [];
+  } else {
+    window.addEventListener("scroll", checkReveal, {passive:true});
+    window.addEventListener("resize", checkReveal, {passive:true});
+    checkReveal();
+    setTimeout(checkReveal, 320);
+    setTimeout(checkReveal, 1300);
+  }
+
+  /* ---------- cursor chakra ---------- */
+  var cur = document.getElementById("cursor");
+  if (!reduce && window.matchMedia("(pointer:fine)").matches){
+    var cx = -100, cy = -100, tx = -100, ty = -100, moved = false;
+    window.addEventListener("mousemove", function(e){
+      tx = e.clientX; ty = e.clientY;
+      if (!moved){ moved = true; cx = tx; cy = ty; cur.style.opacity = ".9"; }
+    }, {passive:true});
+    (function trail(){
+      cx += (tx - cx) * 0.16;
+      cy += (ty - cy) * 0.16;
+      cur.style.transform = "translate("+(cx-13)+"px,"+(cy-13)+"px)";
+      requestAnimationFrame(trail);
+    })();
+  }
+
+  /* ---------- smooth anchors ---------- */
+  document.addEventListener("click", function(e){
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute("href");
+    if (id.length < 2) return;
+    var el = document.querySelector(id);
+    if (!el) return;
+    e.preventDefault();
+    el.scrollIntoView({behavior: reduce ? "auto" : "smooth", block:"start"});
+  });
+})();
+</script>
+</body>
+</html>
