@@ -27,6 +27,11 @@ inner yantra, colour and element all come from the tradition:
 
 Sahasrara's thousand petals are drawn as 24, the usual convention.
 
+Colours follow the traditional root-to-crown spectrum but at riso intensity
+(`#FF2D1F` `#FF6B00` `#FFD400` `#17E06A` `#00B3FF` `#2B37FF` `#7B2BFF`) rather than
+the muted traditional tones. Every swatch pairs with an ink colour that clears
+WCAG AA against it.
+
 ## Languages
 
 The site ships in **Hinglish** (default) and **English**, switched by the `EN`/`HI`
