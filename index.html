@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-IN">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Creative Chakras is a full-spectrum design studio - seven chakras, seven disciplines: brand identity, graphic design, packaging, social, film, web and motion. Sab kuch ek jagah.">
+<meta name="description" content="Creative Chakras is a full-spectrum design studio - seven chakras, seven disciplines: brand identity, graphic design, packaging, social, film, web and motion. In English and Hinglish.">
 <meta name="theme-color" content="#FFFDF5" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#121110" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Creative Chakras">
-<meta property="og:description" content="Creative Chakras is a full-spectrum design studio - seven chakras, seven disciplines: brand identity, graphic design, packaging, social, film, web and motion. Sab kuch ek jagah.">
+<meta property="og:description" content="Creative Chakras is a full-spectrum design studio - seven chakras, seven disciplines: brand identity, graphic design, packaging, social, film, web and motion. In English and Hinglish.">
 <meta property="og:url" content="https://ajmalhasnain-ship-it.github.io/creative-chakras/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Creative Chakras">
-<meta name="twitter:description" content="Creative Chakras is a full-spectrum design studio - seven chakras, seven disciplines: brand identity, graphic design, packaging, social, film, web and motion. Sab kuch ek jagah.">
+<meta name="twitter:description" content="Creative Chakras is a full-spectrum design studio - seven chakras, seven disciplines: brand identity, graphic design, packaging, social, film, web and motion. In English and Hinglish.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2040%2040%27%3E%3Cpath%20fill%3D%27%23E63329%27%20stroke%3D%27%23121110%27%20stroke-width%3D%271.6%27%20d%3D%27M14.69%2C13.37%20C12.28%2C9.67%2016.40%2C2.47%2020.00%2C1.00%20C23.60%2C2.47%2027.72%2C9.67%2025.31%2C13.37%20Z%27%2F%3E%3Cpath%20fill%3D%27%23E63329%27%20stroke%3D%27%23121110%27%20stroke-width%3D%271.6%27%20d%3D%27M26.63%2C14.69%20C30.33%2C12.28%2037.53%2C16.40%2039.00%2C20.00%20C37.53%2C23.60%2030.33%2C27.72%2026.63%2C25.31%20Z%27%2F%3E%3Cpath%20fill%3D%27%23E63329%27%20stroke%3D%27%23121110%27%20stroke-width%3D%271.6%27%20d%3D%27M25.31%2C26.63%20C27.72%2C30.33%2023.60%2C37.53%2020.00%2C39.00%20C16.40%2C37.53%2012.28%2C30.33%2014.69%2C26.63%20Z%27%2F%3E%3Cpath%20fill%3D%27%23E63329%27%20stroke%3D%27%23121110%27%20stroke-width%3D%271.6%27%20d%3D%27M13.37%2C25.31%20C9.67%2C27.72%202.47%2C23.60%201.00%2C20.00%20C2.47%2C16.40%209.67%2C12.28%2013.37%2C14.69%20Z%27%2F%3E%3Ccircle%20cx%3D%2720%27%20cy%3D%2720%27%20r%3D%279%27%20fill%3D%27%23FFFDF5%27%20stroke%3D%27%23121110%27%20stroke-width%3D%271.8%27%2F%3E%3Crect%20x%3D%2714.5%27%20y%3D%2714.5%27%20width%3D%2711%27%20height%3D%2711%27%20fill%3D%27none%27%20stroke%3D%27%23121110%27%20stroke-width%3D%271.5%27%2F%3E%3C%2Fsvg%3E">
 <title>Creative Chakras</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -171,8 +171,9 @@ img{max-width:100%;display:block}
   .logo b{font-size:18px}
   .nav-right{gap:7px}
   .tbtn{width:36px;height:36px}
-  .nav .btn.sm{padding:9px 14px;gap:6px}
-  .nav .btn.sm .long{display:none}
+  /* with a language button added, the nav CTA no longer fits 390px in either
+     language - the hero CTA sits right below it anyway */
+  .nav .btn.sm{display:none}
 }
 
 /* ---------- nav ---------- */
@@ -216,6 +217,12 @@ img{max-width:100%;display:block}
 }
 .tbtn:hover{transform:rotate(-14deg) translateY(-2px);box-shadow:5px 6px 0 var(--black)}
 .tbtn svg{width:17px;height:17px}
+.tbtn.lang{
+  width:auto;min-width:44px;padding:0 11px;background:var(--blue);color:var(--white);
+  font-family:var(--f-mono);font-size:11px;font-weight:700;letter-spacing:.08em;
+}
+.tbtn.lang:hover{transform:translateY(-2px) rotate(-4deg)}
+@media(max-width:620px){.tbtn.lang{min-width:38px;padding:0 8px;font-size:10px}}
 
 /* ---------- section scaffold ---------- */
 .sec{padding:clamp(56px,8vw,112px) 0;position:relative}
@@ -621,10 +628,10 @@ img{max-width:100%;display:block}
       <b>creative <i>chakras</i></b>
     </a>
     <div class="nav-links">
-      <a href="#chakra">sab kuch</a>
-      <a href="#tarika">tarika</a>
-      <a href="#kaam">kaam</a>
-      <a href="#paise">paise</a>
+      <a href="#chakra" data-i18n="nav.services">sab kuch</a>
+      <a href="#tarika" data-i18n="nav.process">tarika</a>
+      <a href="#kaam" data-i18n="nav.work">kaam</a>
+      <a href="#paise" data-i18n="nav.pricing">paise</a>
     </div>
     <div class="nav-right">
       <button class="tbtn" id="themeBtn" type="button" aria-label="Switch colour theme">
@@ -633,7 +640,8 @@ img{max-width:100%;display:block}
           <path d="M12 2.4v2.4M12 19.2v2.4M2.4 12h2.4M19.2 12h2.4M5.2 5.2l1.7 1.7M17.1 17.1l1.7 1.7M18.8 5.2 17.1 6.9M6.9 17.1 5.2 18.8"/>
         </svg>
       </button>
-      <a class="btn sm" href="#baat"><span class="star">&#10022;</span>baat<span class="long">&nbsp;karo</span></a>
+      <button class="tbtn lang" id="langBtn" type="button" aria-label="Switch to English">EN</button>
+      <a class="btn sm" href="#baat"><span class="star">&#10022;</span><span data-i18n="nav.cta">baat<span class="long">&nbsp;karo</span></span></a>
     </div>
   </div>
 </nav>
@@ -643,31 +651,31 @@ img{max-width:100%;display:block}
   <div class="wrap">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="sticker">&#9733; naye kaam ke liye open &#9733;</span>
+        <span class="sticker" data-i18n="hero.sticker">&#9733; naye kaam ke liye open &#9733;</span>
         <h1 class="d1">
-          <span class="l ko">chakra</span>
-          <span class="l gh">ghumao.</span>
+          <span class="l ko" data-i18n="hero.h1a">chakra</span>
+          <span class="l gh" data-i18n="hero.h1b">ghumao.</span>
         </h1>
-        <p class="lede">
+        <p class="lede" data-i18n="hero.lede">
           Logo se lekar launch film tak &#8212; <b>design, edit, motion, social.</b>
           Sab kuch ek chhat ke neeche, ek hi team ke haath mein.
           Paanch vendors, paanch kahaniyan? Woh yahan nahi hota.
         </p>
         <div class="hero-ctas">
-          <a class="btn" href="#baat"><span class="star">&#10022;</span>kaam shuru karo</a>
-          <a class="btn plain" href="#kaam">kaam dekho</a>
+          <a class="btn" href="#baat"><span class="star">&#10022;</span><span data-i18n="hero.cta1">kaam shuru karo</span></a>
+          <a class="btn plain" href="#kaam" data-i18n="hero.cta2">kaam dekho</a>
         </div>
         <div class="hero-facts">
-          <span class="fact">07 chakra</span>
-          <span class="fact">01 team</span>
-          <span class="fact">48 ghante mein reply</span>
-          <span class="fact">0 vendor drama</span>
+          <span class="fact" data-i18n="hero.f1">07 chakra</span>
+          <span class="fact" data-i18n="hero.f2">01 team</span>
+          <span class="fact" data-i18n="hero.f3">48 ghante mein reply</span>
+          <span class="fact" data-i18n="hero.f4">0 vendor drama</span>
         </div>
       </div>
 
       <div class="wheel-side" style="position:relative">
         <div class="doodle d-spin">
-          <span>isko ghumao</span>
+          <span data-i18n="hero.doodle">isko ghumao</span>
           <svg viewBox="0 0 168 46" aria-hidden="true">
             <path d="M10 8 C 46 34, 104 40, 148 28"/>
             <path d="M136 18 L149 28 L134 36"/>
@@ -683,7 +691,7 @@ img{max-width:100%;display:block}
         </div>
         <div class="spinrow">
           <button class="spinbtn" id="spinBtn" type="button">
-            <span class="star">&#10022;</span>ghumao
+            <span class="star">&#10022;</span><span data-i18n="hero.spin">ghumao</span>
           </button>
         </div>
       </div>
@@ -697,9 +705,9 @@ img{max-width:100%;display:block}
 <section class="sec paper" id="chakra">
   <div class="wrap">
     <div class="head rv">
-      <span class="tagmono" style="color:var(--pink)">&#9679; spin karo</span>
-      <h2 class="d2">kya banwana hai?</h2>
-      <p class="lede">
+      <span class="tagmono" style="color:var(--pink)" data-i18n="ch.eyebrow">&#9679; spin karo</span>
+      <h2 class="d2" data-i18n="ch.h2">kya banwana hai?</h2>
+      <p class="lede" data-i18n="ch.lede">
         Saat chakra, neenv se shikhar tak &#8212; har ek ka apna rang, apni pankhudiyan,
         apna kaam. Mandala ghumao, ya seedha kisi bhi chakra pe click karo.
       </p>
@@ -717,9 +725,9 @@ img{max-width:100%;display:block}
 <section class="sec onblue" id="tarika">
   <div class="wrap">
     <div class="head rv">
-      <span class="tagmono" style="color:var(--lime)">&#9679; tarika</span>
-      <h2 class="d2">paanch step.<br>zero confusion.</h2>
-      <p class="lede">
+      <span class="tagmono" style="color:var(--lime)" data-i18n="pr.eyebrow">&#9679; tarika</span>
+      <h2 class="d2" data-i18n="pr.h2">paanch step.<br>zero confusion.</h2>
+      <p class="lede" data-i18n="pr.lede">
         Har project isi chakkar mein ghoomta hai. Aakhri step wapas pehle pe le jaata hai
         &#8212; isliye kaam kabhi rukta nahi.
       </p>
@@ -727,44 +735,44 @@ img{max-width:100%;display:block}
     <div class="steps rv">
       <div class="step">
         <div class="n">01</div>
-        <h4>suno</h4>
+        <h4 data-i18n="pr.s1.t">suno</h4>
         <p class="sh">&#2360;&#2369;&#2344;&#2379;</p>
-        <p>Pehle baithte hain &#8212; aap, aapki team, aur ho sake to aapke customers ke saath.
+        <p data-i18n="pr.s1.b">Pehle baithte hain &#8212; aap, aapki team, aur ho sake to aapke customers ke saath.
            Koi deck nahi, koi template nahi. Sirf ek sach dhoondhte hain.</p>
       </div>
       <div class="step">
         <div class="n">02</div>
-        <h4>socho</h4>
+        <h4 data-i18n="pr.s2.t">socho</h4>
         <p class="sh">&#2360;&#2379;&#2330;&#2379;</p>
-        <p>Positioning, tone, kya bolna hai aur kya bilkul nahi. Yeh sign-off ho gaya to
+        <p data-i18n="pr.s2.b">Positioning, tone, kya bolna hai aur kya bilkul nahi. Yeh sign-off ho gaya to
            aage ke saare jhagde apne aap khatam.</p>
       </div>
       <div class="step">
         <div class="n">03</div>
-        <h4>banao</h4>
+        <h4 data-i18n="pr.s3.t">banao</h4>
         <p class="sh">&#2348;&#2344;&#2366;&#2323;</p>
-        <p>Identity, type, colour, packaging, screens &#8212; system bana ke dete hain,
+        <p data-i18n="pr.s3.b">Identity, type, colour, packaging, screens &#8212; system bana ke dete hain,
            ek-off files nahi. Aapki team khud aage badha sake.</p>
       </div>
       <div class="step">
         <div class="n">04</div>
-        <h4>chalao</h4>
+        <h4 data-i18n="pr.s4.t">chalao</h4>
         <p class="sh">&#2330;&#2354;&#2366;&#2323;</p>
-        <p>Ab sab kuch chalta hai: film, edits, animation, launch campaign, pehle 90 din
+        <p data-i18n="pr.s4.b">Ab sab kuch chalta hai: film, edits, animation, launch campaign, pehle 90 din
            ka content. Brand file se nikal ke duniya mein.</p>
       </div>
       <div class="step">
         <div class="n">05</div>
-        <h4>badhao</h4>
+        <h4 data-i18n="pr.s5.t">badhao</h4>
         <p class="sh">&#2348;&#2338;&#2364;&#2366;&#2323;</p>
-        <p>Har mahine output, har quarter review, aur seedhi baat ki kya chala kya nahi.
+        <p data-i18n="pr.s5.b">Har mahine output, har quarter review, aur seedhi baat ki kya chala kya nahi.
            Phir wapas step 01 &#8212; is baar data ke saath.</p>
       </div>
       <div class="step wide" style="background:var(--lime)">
         <div class="n" style="color:var(--pink)">&#8734;</div>
-        <h4>aur phir<br>dobara</h4>
+        <h4 data-i18n="pr.s6.t">aur phir<br>dobara</h4>
         <p class="sh">&#2330;&#2325;&#2381;&#2352; &#2330;&#2354;&#2340;&#2366; &#2352;&#2361;&#2375;</p>
-        <p>Chakra ka matlab hi yahi hai. Ek cycle khatam, agla shuru &#8212; har baar
+        <p data-i18n="pr.s6.b">Chakra ka matlab hi yahi hai. Ek cycle khatam, agla shuru &#8212; har baar
            thoda tez, thoda behtar.</p>
       </div>
     </div>
@@ -775,9 +783,9 @@ img{max-width:100%;display:block}
 <section class="sec paper" id="kaam">
   <div class="wrap">
     <div class="head rv">
-      <span class="tagmono" style="color:var(--blue)">&#9679; kaam</span>
-      <h2 class="d2">baatein kam,<br>kaam zyada.</h2>
-      <p class="lede">Filter karo us cheez se jisne project lead kiya. Zyadatar ne chaar-paanch
+      <span class="tagmono" style="color:var(--blue)" data-i18n="wk.eyebrow">&#9679; kaam</span>
+      <h2 class="d2" data-i18n="wk.h2">baatein kam,<br>kaam zyada.</h2>
+      <p class="lede" data-i18n="wk.lede">Filter karo us cheez se jisne project lead kiya. Zyadatar ne chaar-paanch
          spokes ek saath use kiye.</p>
     </div>
     <div class="filters rv" id="filters"></div>
@@ -793,15 +801,15 @@ img{max-width:100%;display:block}
     <div class="stats rv">
       <div class="stat">
         <div class="big">07</div>
-        <p>Chakra, sab in-house. Beech mein koi vendor nahi, isliye kuch kho nahi sakta.</p>
+        <p data-i18n="st.1">Chakra, sab in-house. Beech mein koi vendor nahi, isliye kuch kho nahi sakta.</p>
       </div>
       <div class="stat">
         <div class="big">48h</div>
-        <p>Har live project pe reply ki max limit &#8212; launch se pehle weekend bhi.</p>
+        <p data-i18n="st.2">Har live project pe reply ki max limit &#8212; launch se pehle weekend bhi.</p>
       </div>
       <div class="stat">
         <div class="big">01</div>
-        <p>Ek hi banda kickoff se delivery tak aapke brand pe. Har baar nayi shakal nahi.</p>
+        <p data-i18n="st.3">Ek hi banda kickoff se delivery tak aapke brand pe. Har baar nayi shakal nahi.</p>
       </div>
     </div>
   </div>
@@ -811,24 +819,24 @@ img{max-width:100%;display:block}
 <section class="sec paper">
   <div class="wrap">
     <div class="head rv">
-      <span class="tagmono" style="color:var(--violet)">&#9679; log kya kehte hain</span>
-      <h2 class="d2">humse behtar<br>inhone kaha.</h2>
+      <span class="tagmono" style="color:var(--violet)" data-i18n="vo.eyebrow">&#9679; log kya kehte hain</span>
+      <h2 class="d2" data-i18n="vo.h2">humse behtar<br>inhone kaha.</h2>
     </div>
     <div class="voices rv">
       <div class="note">
-        <p class="q">&#8220;Aaye the logo ke liye, le ke gaye poora brand &#8212; ab sales team
+        <p class="q" data-i18n="vo.q1">&#8220;Aaye the logo ke liye, le ke gaye poora brand &#8212; ab sales team
           khud samjha paati hai ki hum hain kya.&#8221;</p>
-        <div class="who"><b>Founder</b><em>D2C skincare &#183; Mumbai</em></div>
+        <div class="who"><b data-i18n="vo.r1">Founder</b><em>D2C skincare &#183; Mumbai</em></div>
       </div>
       <div class="note">
-        <p class="q">&#8220;Film, packaging aur feed &#8212; teeno ek hi kamre se nikle.
+        <p class="q" data-i18n="vo.q2">&#8220;Film, packaging aur feed &#8212; teeno ek hi kamre se nikle.
           Dikhta hai: sab kuch aapas mein match karta hai.&#8221;</p>
-        <div class="who"><b>Marketing lead</b><em>Beverage brand &#183; Delhi NCR</em></div>
+        <div class="who"><b data-i18n="vo.r2">Marketing lead</b><em>Beverage brand &#183; Delhi NCR</em></div>
       </div>
       <div class="note">
-        <p class="q">&#8220;Inhone humare board se zyada mushkil sawaal poochhe.
+        <p class="q" data-i18n="vo.q3">&#8220;Inhone humare board se zyada mushkil sawaal poochhe.
           Kaam usi wajah se behtar nikla.&#8221;</p>
-        <div class="who"><b>Head of growth</b><em>Fintech &#183; Bengaluru</em></div>
+        <div class="who"><b data-i18n="vo.r3">Head of growth</b><em>Fintech &#183; Bengaluru</em></div>
       </div>
     </div>
   </div>
@@ -838,49 +846,49 @@ img{max-width:100%;display:block}
 <section class="sec paper" id="paise">
   <div class="wrap">
     <div class="head rv">
-      <span class="tagmono" style="color:var(--pink)">&#9679; paise ki baat</span>
-      <h2 class="d2">teen tareeke.<br>koi chhupi baat nahi.</h2>
-      <p class="lede">Teeno mein se kuch fit nahi baithta? Pehli call pe bol dijiye &#8212;
+      <span class="tagmono" style="color:var(--pink)" data-i18n="pl.eyebrow">&#9679; paise ki baat</span>
+      <h2 class="d2" data-i18n="pl.h2">teen tareeke.<br>koi chhupi baat nahi.</h2>
+      <p class="lede" data-i18n="pl.lede">Teeno mein se kuch fit nahi baithta? Pehli call pe bol dijiye &#8212;
          model pehle bhi badla hai, phir badal denge.</p>
     </div>
     <div class="plans rv">
       <div class="plan">
-        <span class="pt">01 &#183; sprint</span>
-        <h4>do hafte.<br>ek kaam.</h4>
+        <span class="pt" data-i18n="pl.1.s">01 &#183; sprint</span>
+        <h4 data-i18n="pl.1.t">do hafte.<br>ek kaam.</h4>
         <p class="ph">&#2340;&#2375;&#2332;&#2364; &#2324;&#2352; &#2360;&#2368;&#2343;&#2366;</p>
-        <p>Ek hi deliverable pe tez burst &#8212; launch film, packaging refresh, ya campaign
+        <p data-i18n="pl.1.b">Ek hi deliverable pe tez burst &#8212; launch film, packaging refresh, ya campaign
            ka key visual.</p>
         <ul>
-          <li>Pehle se scope aur price, dono fix</li>
-          <li>Ek discipline lead, baaki support</li>
-          <li>Do review rounds andar hi</li>
-          <li>Din 14 pe files aur source handover</li>
+          <li data-i18n="pl.1.l1">Pehle se scope aur price, dono fix</li>
+          <li data-i18n="pl.1.l2">Ek discipline lead, baaki support</li>
+          <li data-i18n="pl.1.l3">Do review rounds andar hi</li>
+          <li data-i18n="pl.1.l4">Din 14 pe files aur source handover</li>
         </ul>
       </div>
       <div class="plan feat">
-        <span class="pt">02 &#183; project</span>
-        <h4>shuru se<br>launch tak.</h4>
+        <span class="pt" data-i18n="pl.2.s">02 &#183; project</span>
+        <h4 data-i18n="pl.2.t">shuru se<br>launch tak.</h4>
         <p class="ph">&#2346;&#2370;&#2352;&#2366; &#2325;&#2366;&#2350;</p>
-        <p>Poora arc: strategy, identity, uska system, aur woh content jo usse market tak
+        <p data-i18n="pl.2.b">Poora arc: strategy, identity, uska system, aur woh content jo usse market tak
            le jaata hai.</p>
         <ul>
-          <li>Chhah se baarah hafte, phases mein</li>
-          <li>Poori team aapke brand pe</li>
-          <li>Brand book aur chalte-firte templates</li>
-          <li>Film, print aur social ke launch assets</li>
+          <li data-i18n="pl.2.l1">Chhah se baarah hafte, phases mein</li>
+          <li data-i18n="pl.2.l2">Poori team aapke brand pe</li>
+          <li data-i18n="pl.2.l3">Brand book aur chalte-firte templates</li>
+          <li data-i18n="pl.2.l4">Film, print aur social ke launch assets</li>
         </ul>
       </div>
       <div class="plan">
-        <span class="pt">03 &#183; retainer</span>
-        <h4>aapki design<br>team, on call.</h4>
+        <span class="pt" data-i18n="pl.3.s">03 &#183; retainer</span>
+        <h4 data-i18n="pl.3.t">aapki design<br>team, on call.</h4>
         <p class="ph">&#2361;&#2352; &#2350;&#2361;&#2368;&#2344;&#2375;</p>
-        <p>Har mahine studio time un brands ke liye jo lagataar ship karte hain aur quality
+        <p data-i18n="pl.3.b">Har mahine studio time un brands ke liye jo lagataar ship karte hain aur quality
            girne nahi de sakte.</p>
         <ul>
-          <li>Monthly hours, kisi bhi discipline mein</li>
-          <li>Shared calendar aur content plan</li>
-          <li>Live campaigns pe priority turnaround</li>
-          <li>Har quarter brand health review</li>
+          <li data-i18n="pl.3.l1">Monthly hours, kisi bhi discipline mein</li>
+          <li data-i18n="pl.3.l2">Shared calendar aur content plan</li>
+          <li data-i18n="pl.3.l3">Live campaigns pe priority turnaround</li>
+          <li data-i18n="pl.3.l4">Har quarter brand health review</li>
         </ul>
       </div>
     </div>
@@ -898,15 +906,15 @@ img{max-width:100%;display:block}
     </svg>
   </div>
   <div class="wrap">
-    <span class="tagmono rv" style="color:var(--lime)">&#9679; aakhri baat</span>
-    <h2 class="d1 rv" style="max-width:14ch">kaam ki<br>baat karein?</h2>
-    <p class="lede rv" style="opacity:.9">
+    <span class="tagmono rv" style="color:var(--lime)" data-i18n="ct.eyebrow">&#9679; aakhri baat</span>
+    <h2 class="d1 rv" style="max-width:14ch" data-i18n="ct.h2">kaam ki<br>baat karein?</h2>
+    <p class="lede rv" style="opacity:.9" data-i18n="ct.lede">
       Ek line bhej dijiye &#8212; brand kya hai, deadline kya hai, budget kitna hai.
       Jawab ek insaan dega, form ki receipt nahi. Do working days ke andar.
     </p>
     <a class="mailto rv" href="mailto:hello@creativechakras.com">hello@creativechakras.com</a>
     <div class="hero-ctas rv">
-      <a class="btn lime" href="mailto:hello@creativechakras.com"><span class="star">&#10022;</span>email bhejo</a>
+      <a class="btn lime" href="mailto:hello@creativechakras.com"><span class="star">&#10022;</span><span data-i18n="ct.btn">email bhejo</span></a>
       <a class="btn plain" href="tel:+910000000000" style="background:var(--white);color:var(--black);border-color:var(--black);box-shadow:var(--pop-black)">+91 00000 00000</a>
     </div>
   </div>
@@ -924,29 +932,29 @@ img{max-width:100%;display:block}
         </svg>
         <b>creative <i>chakras</i></b>
       </a>
-      <p class="fblurb">Ek independent creative studio. Design, edit, motion, social &#8212;
+      <p class="fblurb" data-i18n="ft.blurb">Ek independent creative studio. Design, edit, motion, social &#8212;
         sab kuch ek jagah.</p>
     </div>
     <div>
-      <h5>studio</h5>
+      <h5 data-i18n="ft.h1">studio</h5>
       <ul>
-        <li><a href="#chakra">sab kuch</a></li>
-        <li><a href="#tarika">tarika</a></li>
-        <li><a href="#paise">paise</a></li>
-        <li><a href="#baat">baat karo</a></li>
+        <li><a href="#chakra" data-i18n="ft.l1">sab kuch</a></li>
+        <li><a href="#tarika" data-i18n="ft.l2">tarika</a></li>
+        <li><a href="#paise" data-i18n="ft.l3">paise</a></li>
+        <li><a href="#baat" data-i18n="ft.l4">baat karo</a></li>
       </ul>
     </div>
     <div>
-      <h5>kaam</h5>
+      <h5 data-i18n="ft.h2">kaam</h5>
       <ul>
-        <li><a href="#kaam">selected work</a></li>
-        <li><a href="#kaam">branding</a></li>
-        <li><a href="#kaam">motion &amp; film</a></li>
-        <li><a href="#kaam">social</a></li>
+        <li><a href="#kaam" data-i18n="ft.l5">selected work</a></li>
+        <li><a href="#kaam" data-i18n="ft.l6">branding</a></li>
+        <li><a href="#kaam" data-i18n="ft.l7">motion &amp; film</a></li>
+        <li><a href="#kaam" data-i18n="ft.l8">social</a></li>
       </ul>
     </div>
     <div>
-      <h5>kahin aur</h5>
+      <h5 data-i18n="ft.h3">kahin aur</h5>
       <ul>
         <li><a href="#baat">instagram</a></li>
         <li><a href="#baat">behance</a></li>
@@ -958,7 +966,7 @@ img{max-width:100%;display:block}
   <div class="foot-bot">
     <span>&#169; 2026 creative chakras</span>
     <span class="hi">&#2332;&#2379; &#2330;&#2354;&#2340;&#2366; &#2361;&#2376;, &#2357;&#2361;&#2368; &#2348;&#2338;&#2364;&#2340;&#2366; &#2361;&#2376;&#2404;</span>
-    <span>khud banaya, khud code kiya</span>
+    <span data-i18n="ft.made">khud banaya, khud code kiya</span>
   </div>
 </footer>
 
@@ -995,12 +1003,15 @@ img{max-width:100%;display:block}
     var one = items.map(function(t){ return "<span>"+t+"</span>"; }).join("");
     el.innerHTML = one + one;
   }
-  band(document.getElementById("bandA"),
-    ["graphic design","video editing","motion design","social media","branding","packaging","web &amp; ui","content"]);
-  band(document.getElementById("bandB"),
-    ["sab kuch ek jagah","ek team","zero handoff","48 ghante mein reply","made in india","kaam bolta hai"]);
-  band(document.getElementById("bandC"),
-    ["chakra ghoomta rahe","brand chalta rahe","rukna mana hai","aur tez","aur saaf","aur zinda"]);
+  var SERVICE_WORDS = ["graphic design","video editing","motion design","social media",
+                       "branding","packaging","web &amp; ui","content"];
+  var BANDS = {
+    a: { hi: SERVICE_WORDS, en: SERVICE_WORDS },
+    b: { hi: ["sab kuch ek jagah","ek team","zero handoff","48 ghante mein reply","made in india","kaam bolta hai"],
+         en: ["everything in one place","one team","zero handoff","reply in 48 hours","made in india","the work speaks"] },
+    c: { hi: ["chakra ghoomta rahe","brand chalta rahe","rukna mana hai","aur tez","aur saaf","aur zinda"],
+         en: ["keep the chakra turning","keep the brand moving","stopping is not allowed","faster","sharper","more alive"] }
+  };
 
   /* ---------- the seven chakras ----------
      Petal count, inner yantra, colour and element follow the traditional system.
@@ -1018,6 +1029,7 @@ img{max-width:100%;display:block}
     "col": "#E63329",
     "ink": "#FFFDF5",
     "blurb": "Neenv. Naam, positioning, logo system aur woh rules jo poore brand ko imaandaar rakhte hain.",
+    "blurb_en": "Foundation. Naming, positioning, logo systems and the rules that keep the whole brand honest.",
     "items": [
       "naming",
       "logo &amp; wordmark",
@@ -1039,6 +1051,7 @@ img{max-width:100%;display:block}
     "col": "#F2740C",
     "ink": "#FFFDF5",
     "blurb": "Bahaav. Har hafte ka output - campaign keys, posters, decks, jo bhi cheez chahiye.",
+    "blurb_en": "Flow. The week-to-week output - campaign keys, posters, decks, whatever the brand needs.",
     "items": [
       "campaign key visuals",
       "posters &amp; ooh",
@@ -1060,6 +1073,7 @@ img{max-width:100%;display:block}
     "col": "#FFC200",
     "ink": "#121110",
     "blurb": "Aag. Structure, label, dielines aur press - shelf ke liye bhi, printer ke liye bhi.",
+    "blurb_en": "Fire. Structure, label, dielines and press - made for the shelf and for the printer.",
     "items": [
       "primary &amp; secondary",
       "dielines",
@@ -1081,6 +1095,7 @@ img{max-width:100%;display:block}
     "col": "#2FAE4E",
     "ink": "#FFFDF5",
     "blurb": "Jud-aav. Calendar, formats aur hooks - ek system jo bina toote chalta rahe.",
+    "blurb_en": "Connection. Calendars, formats and hooks - a system that keeps posting without breaking.",
     "items": [
       "content strategy",
       "monthly calendar",
@@ -1102,6 +1117,7 @@ img{max-width:100%;display:block}
     "col": "#1B9AD6",
     "ink": "#FFFDF5",
     "blurb": "Awaaz. Shoot se final cut tak - crew, direction, kahani, pace, sound, har ratio.",
+    "blurb_en": "Voice. From shoot to final cut - crew, direction, story, pace, sound, every ratio.",
     "items": [
       "ad films",
       "reels &amp; shorts",
@@ -1123,6 +1139,7 @@ img{max-width:100%;display:block}
     "col": "#3D3F9E",
     "ink": "#FFFDF5",
     "blurb": "Drishti. Sites aur product screens jahan identity browser mein bhi zinda rehti hai.",
+    "blurb_en": "Sight. Sites and product screens where the identity stays alive inside a browser.",
     "items": [
       "marketing sites",
       "landing pages",
@@ -1144,6 +1161,7 @@ img{max-width:100%;display:block}
     "col": "#8A34C4",
     "ink": "#FFFDF5",
     "blurb": "Chetna. Sab kuch hilta-dulta - logo stings, explainers, title systems, 2D aur 3D.",
+    "blurb_en": "Consciousness. Everything in movement - logo stings, explainers, title systems, 2D and 3D.",
     "items": [
       "logo animation",
       "2d &amp; cel",
@@ -1253,7 +1271,7 @@ img{max-width:100%;display:block}
         '<p class="rhi">'+c.dev+' &#183; '+c.sans+'</p>'+
       '</div>'+
       '<div class="rright">'+
-        '<p>'+c.blurb+'</p>'+
+        '<p>'+(LANG === "en" && c.blurb_en ? c.blurb_en : c.blurb)+'</p>'+
         '<div class="chips">'+
           '<span class="chip" style="background:'+c.col+';color:'+c.ink+';border-color:var(--black)">'+
             (c.petals===24 ? "1000" : c.petals)+' petals</span>'+
@@ -1307,6 +1325,7 @@ img{max-width:100%;display:block}
   });
   mandala.addEventListener("click", function(){ if (!spinning) spinBtn.click(); });
 
+  function buildColumn(){
   colEl.innerHTML = CHAKRAS.map(function(c,i){
     return '<button class="node" type="button" data-i="'+i+'">'+
              mini(c)+
@@ -1317,6 +1336,8 @@ img{max-width:100%;display:block}
              '<span class="nmeta">'+(c.petals===24?"1000":c.petals)+' petals<br>'+c.elen+'</span>'+
            '</button>';
   }).join("");
+  }
+  buildColumn();
   colEl.addEventListener("click", function(e){
     var b = e.target.closest(".node"); if (b) spinTo(+b.dataset.i);
   });
@@ -1327,21 +1348,27 @@ img{max-width:100%;display:block}
   var PROJECTS = [
     { t:"slow skin", cat:"branding", col:"#FF3DA5",
       d:"Skincare label formulation se upar tak dobara bana &#8212; naam, identity, packaging system aur launch film.",
+      d_en:"A skincare label rebuilt from the formulation up &#8212; name, identity, packaging system and the launch film.",
       tags:["identity","packaging","film"] },
     { t:"bharat bean", cat:"packaging", col:"#C8FF1E",
       d:"Single-origin coffee, baarah SKU, ek hi shelf language. Dielines, labels, press files &#8212; chhah hafte.",
+      d_en:"Single-origin coffee, twelve SKUs, one shelf language. Dielines, labels and press files in six weeks.",
       tags:["packaging","print","art direction"] },
     { t:"tarang ev", cat:"motion", col:"#2B37FF",
       d:"EV brand ko chalta hua dikhna tha. Identity hi is hisaab se bani ki har mark animate ho sake.",
+      d_en:"An EV brand that needed to look like it moved. The identity was built knowing how every mark would animate.",
       tags:["motion","identity","3d"] },
     { t:"paisa sahi", cat:"social", col:"#FFD400",
       d:"Navve din ka finance content jo log poora dekh gaye. Format system, hooks, calendar, reporting.",
+      d_en:"Ninety days of finance content people actually watched to the end. Format system, hooks, calendar, reporting.",
       tags:["social","editing","copy"] },
     { t:"anaar hospitality", cat:"branding", col:"#7B2BFF",
       d:"Paanch properties, ek bhi shared awaaz nahi. Ek architecture, paanch shakhsiyat, zero confusion.",
+      d_en:"Five properties, not one shared voice. One architecture, five personalities, zero confusion.",
       tags:["identity","print","interiors"] },
     { t:"kshitij studio", cat:"web", col:"#FF3DA5",
       d:"Architecture practice ka portfolio &#8212; shaant, tez, aur aisa ki nayi project woh khud daal sakein.",
+      d_en:"An architecture practice's portfolio &#8212; quiet, fast, and built so their team can add a project themselves.",
       tags:["web","ui","design system"] }
   ];
 
@@ -1357,24 +1384,31 @@ img{max-width:100%;display:block}
   }
 
   var grid = document.getElementById("workGrid");
+  function buildWork(){
   grid.innerHTML = PROJECTS.map(function(p,i){
     return '<article class="wcard" data-cat="'+p.cat+'">'+
       '<div class="plate" style="background:'+p.col+'">'+ plate(p.col, i*9+5) +'</div>'+
       '<div class="meta">'+
         '<span class="tagmono" style="opacity:.55">'+p.cat+'</span>'+
         '<h4>'+p.t+'</h4>'+
-        '<p>'+p.d+'</p>'+
+        '<p>'+(LANG === "en" && p.d_en ? p.d_en : p.d)+'</p>'+
         '<div class="tg">'+ p.tags.map(function(t){return '<span class="chip">'+t+'</span>';}).join("") +'</div>'+
       '</div>'+
     '</article>';
   }).join("");
+  }
+  buildWork();
 
   var cats = ["sab"].concat(PROJECTS.map(function(p){return p.cat;})
     .filter(function(v,i,a){return a.indexOf(v)===i;}));
   var fl = document.getElementById("filters");
+  function buildFilters(){
   fl.innerHTML = cats.map(function(c,i){
-    return '<button class="filter'+(i===0?' on':'')+'" type="button" data-cat="'+c+'">'+c+'</button>';
+    var label = (i===0 && LANG === "en") ? "all" : c;
+    return '<button class="filter'+(i===0?' on':'')+'" type="button" data-cat="'+c+'">'+label+'</button>';
   }).join("");
+  }
+  buildFilters();
   fl.addEventListener("click", function(e){
     var b = e.target.closest(".filter"); if (!b) return;
     Array.prototype.forEach.call(fl.children, function(x){ x.classList.toggle("on", x===b); });
@@ -1383,6 +1417,140 @@ img{max-width:100%;display:block}
       card.classList.toggle("hide", c!=="sab" && card.dataset.cat!==c);
     });
   });
+
+  /* ---------- language ----------
+     Hinglish is the default and lives inline in the markup, so the page still
+     reads correctly with no JS at all. We snapshot that markup on load, so the
+     dictionary below only has to carry the English. */
+  var EN = {
+  "ch.eyebrow": "&#9679; spin it",
+  "ch.h2": "what needs making?",
+  "ch.lede": "Seven chakras, root to crown &#8212; each with its own colour, its own petals, its own job. Spin the mandala, or click straight through to any one of them.",
+  "ct.btn": "send an email",
+  "ct.eyebrow": "&#9679; last thing",
+  "ct.h2": "shall we<br>talk work?",
+  "ct.lede": "Send us a line &#8212; what the brand is, what the deadline is, what the budget looks like. A person will answer, not a form receipt, within two working days.",
+  "ft.blurb": "An independent creative studio. Design, edit, motion, social &#8212; all of it in one place.",
+  "ft.h1": "studio",
+  "ft.h2": "work",
+  "ft.h3": "elsewhere",
+  "ft.l1": "services",
+  "ft.l2": "process",
+  "ft.l3": "pricing",
+  "ft.l4": "let&#8217;s talk",
+  "ft.l5": "selected work",
+  "ft.l6": "branding",
+  "ft.l7": "motion &amp; film",
+  "ft.l8": "social",
+  "ft.made": "designed &amp; built in-house",
+  "hero.cta1": "start a project",
+  "hero.cta2": "see the work",
+  "hero.doodle": "give it a spin",
+  "hero.f1": "07 chakras",
+  "hero.f2": "01 team",
+  "hero.f3": "reply within 48 hours",
+  "hero.f4": "0 vendor drama",
+  "hero.h1a": "spin the",
+  "hero.h1b": "chakra.",
+  "hero.lede": "From the first logo to the launch film &#8212; <b>design, edit, motion, social.</b> All of it under one roof, in one team&#8217;s hands. Five vendors telling five different stories? That doesn&#8217;t happen here.",
+  "hero.spin": "spin",
+  "hero.sticker": "&#9733; open for new work &#9733;",
+  "nav.cta": "let&#8217;s<span class=\"long\">&nbsp;talk</span>",
+  "nav.pricing": "pricing",
+  "nav.process": "process",
+  "nav.services": "services",
+  "nav.work": "work",
+  "pl.1.b": "A fast burst on a single deliverable &#8212; a launch film, a packaging refresh, or a campaign key visual.",
+  "pl.1.l1": "Scope and price both fixed up front",
+  "pl.1.l2": "One discipline leads, the rest support",
+  "pl.1.l3": "Two review rounds built in",
+  "pl.1.l4": "Files and source handed over on day 14",
+  "pl.1.s": "01 &#183; sprint",
+  "pl.1.t": "two weeks.<br>one problem.",
+  "pl.2.b": "The full arc: strategy, identity, the system that carries it, and the content that takes it to market.",
+  "pl.2.l1": "Six to twelve weeks, in phases",
+  "pl.2.l2": "The whole team on your brand",
+  "pl.2.l3": "Brand book and working templates",
+  "pl.2.l4": "Launch assets across film, print and social",
+  "pl.2.s": "02 &#183; project",
+  "pl.2.t": "start to<br>launch.",
+  "pl.3.b": "Monthly studio time for brands that ship constantly and can&#8217;t let the quality slip.",
+  "pl.3.l1": "Monthly hours across any discipline",
+  "pl.3.l2": "Shared calendar and content plan",
+  "pl.3.l3": "Priority turnaround on live campaigns",
+  "pl.3.l4": "Quarterly brand health review",
+  "pl.3.s": "03 &#183; retainer",
+  "pl.3.t": "your design<br>team, on call.",
+  "pl.eyebrow": "&#9679; pricing",
+  "pl.h2": "three ways in.<br>nothing hidden.",
+  "pl.lede": "None of the three fit? Say so on the first call &#8212; we&#8217;ve reshaped the model before and we&#8217;ll do it again.",
+  "pr.eyebrow": "&#9679; process",
+  "pr.h2": "five steps.<br>zero confusion.",
+  "pr.lede": "Every project turns through the same cycle. The last step leads back to the first &#8212; which is why the work never stops.",
+  "pr.s1.b": "First we sit down &#8212; with you, your team, and where we can, your customers. No deck, no templates. We&#8217;re looking for the one true thing.",
+  "pr.s1.t": "listen",
+  "pr.s2.b": "Positioning, tone, what gets said and what never does. Once this is signed off it settles every argument that comes later.",
+  "pr.s2.t": "frame",
+  "pr.s3.b": "Identity, type, colour, packaging, screens &#8212; built as a system, not a set of one-offs, so your own team can carry it forward.",
+  "pr.s3.t": "build",
+  "pr.s4.b": "Now everything moves: film, edits, animation, the launch campaign, the first 90 days of content. The brand leaves the file and meets the world.",
+  "pr.s4.t": "launch",
+  "pr.s5.b": "Monthly output, quarterly reviews, and straight talk about what worked and what didn&#8217;t. Then back to step 01 &#8212; this time with real data.",
+  "pr.s5.t": "grow",
+  "pr.s6.b": "That is what a chakra means. One cycle ends, the next begins &#8212; each time a little faster, a little better.",
+  "pr.s6.t": "and then<br>again",
+  "st.1": "Chakras, all in-house. No vendor in the middle, so nothing gets lost.",
+  "st.2": "The longest you&#8217;ll wait for a reply on a live project &#8212; weekends before a launch included.",
+  "st.3": "One person on your brand from kickoff to delivery. Not a new face every time.",
+  "vo.eyebrow": "&#9679; what people say",
+  "vo.h2": "they said it<br>better than us.",
+  "vo.q1": "&#8220;We came for a logo and left with a whole brand &#8212; now the sales team can explain who we are without us in the room.&#8221;",
+  "vo.q2": "&#8220;The film, the packaging and the feed all came out of one room. You can see it &#8212; everything rhymes.&#8221;",
+  "vo.q3": "&#8220;They asked harder questions than our own board did. The work came out better for it.&#8221;",
+  "wk.eyebrow": "&#9679; work",
+  "wk.h2": "less talk,<br>more work.",
+  "wk.lede": "Filter by the discipline that led each project. Most of them used four or five at once."
+};
+
+  var LANG = "hi";
+  try { LANG = localStorage.getItem("cc-lang") || "hi"; } catch(e){}
+  if (LANG !== "en" && LANG !== "hi") LANG = "hi";
+
+  var langBtn = document.getElementById("langBtn");
+  var i18nEls = Array.prototype.slice.call(document.querySelectorAll("[data-i18n]"));
+  var ORIG = {};
+  i18nEls.forEach(function(el){ ORIG[el.getAttribute("data-i18n")] = el.innerHTML; });
+
+  function applyLang(){
+    document.documentElement.lang = (LANG === "en" ? "en" : "en-IN");
+    i18nEls.forEach(function(el){
+      var k = el.getAttribute("data-i18n");
+      var v = (LANG === "en") ? EN[k] : ORIG[k];
+      if (v !== undefined && v !== null) el.innerHTML = v;
+    });
+    if (langBtn){
+      /* the button shows the language you would switch TO */
+      langBtn.textContent = (LANG === "hi" ? "EN" : "HI");
+      langBtn.setAttribute("aria-label",
+        LANG === "hi" ? "Switch to English" : "Hinglish mein badlo");
+    }
+    band(document.getElementById("bandA"), BANDS.a[LANG]);
+    band(document.getElementById("bandB"), BANDS.b[LANG]);
+    band(document.getElementById("bandC"), BANDS.c[LANG]);
+    buildWork();
+    buildFilters();
+    buildColumn();
+    if (active >= 0) setChakra(active, false);
+  }
+
+  if (langBtn){
+    langBtn.addEventListener("click", function(){
+      LANG = (LANG === "hi" ? "en" : "hi");
+      try { localStorage.setItem("cc-lang", LANG); } catch(e){}
+      applyLang();
+    });
+  }
+  applyLang();
 
   /* ---------- kundalini rail ---------- */
   var kfill = document.getElementById("kfill");

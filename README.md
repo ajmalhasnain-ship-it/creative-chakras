@@ -27,6 +27,16 @@ inner yantra, colour and element all come from the tradition:
 
 Sahasrara's thousand petals are drawn as 24, the usual convention.
 
+## Languages
+
+The site ships in **Hinglish** (default) and **English**, switched by the `EN`/`HI`
+button in the nav. Hinglish lives inline in the markup, so the page still reads
+correctly with JavaScript off; the script snapshots that markup on load and the
+dictionary only carries the English. The choice persists in `localStorage`.
+
+To change copy: edit the Hinglish in the HTML and the matching key in the `EN`
+object in the script. Both must be updated together.
+
 ## Note
 
 Project case studies, testimonials, email and phone number are **placeholder content**
