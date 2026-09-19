@@ -49,6 +49,9 @@
   --f-mono: "Martian Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
   --f-pop:  "Baloo 2","Noto Sans Devanagari",system-ui,sans-serif;
 
+  --live: #E63329;       /* the active chakra tints the page */
+  --live-ink: #FFFDF5;
+
   --pad: clamp(18px,4.5vw,64px);
   --maxw: 1280px;
   --edgew: 2.5px;
@@ -134,11 +137,12 @@ img{max-width:100%;display:block}
   display:inline-flex;align-items:center;gap:8px;
   font-family:var(--f-mono);font-size:10px;font-weight:700;
   letter-spacing:.13em;text-transform:uppercase;
-  background:var(--lime);color:var(--black);
+  background:var(--live);color:var(--live-ink);
   border:var(--edgew) solid var(--black);
   border-radius:999px;padding:8px 15px;
   box-shadow:3px 4px 0 var(--black);
   transform:rotate(-2deg);
+  transition:background .5s ease,color .5s ease;
 }
 .btn{
   display:inline-flex;align-items:center;gap:9px;
@@ -217,6 +221,10 @@ img{max-width:100%;display:block}
 .sec{padding:clamp(56px,8vw,112px) 0;position:relative}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad)}
 .sec.paper{background:var(--bg);color:var(--fg)}
+#chakra{background:var(--bg);transition:background .6s ease}
+@supports (background: color-mix(in srgb, red 5%, blue)){
+  #chakra{background:color-mix(in srgb, var(--live) 8%, var(--bg))}
+}
 .sec.onlime{background:var(--lime);color:var(--black)}
 .sec.onblue{background:var(--blue);color:var(--white)}
 .sec.onyellow{background:var(--yellow);color:var(--black)}
@@ -274,7 +282,14 @@ img{max-width:100%;display:block}
   width:100%;max-width:505px;margin:0 auto;aspect-ratio:1/1;
 }
 .wheelbox svg{width:100%;height:100%;display:block;cursor:pointer}
+#ambient{transform-origin:200px 200px;animation:rot 150s linear infinite}
 #mandalaRot{transform-origin:200px 200px}
+#petals{transform-origin:200px 200px;animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.038)}}
+#petals path{transform-origin:200px 200px;animation:petalIn .6s cubic-bezier(.2,1.6,.4,1) backwards}
+@keyframes petalIn{from{opacity:0;transform:scale(.5) rotate(-12deg)}to{opacity:1;transform:none}}
+.bija{animation:glow 3.2s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:1}50%{opacity:.55}}
 .petal{stroke:var(--black);stroke-width:2.5;stroke-linejoin:round}
 .mhub{fill:var(--white);stroke:var(--black);stroke-width:3}
 .yantra{fill:none;stroke:var(--black);stroke-width:3;stroke-linejoin:round}
@@ -284,9 +299,10 @@ img{max-width:100%;display:block}
   text-anchor:middle;dominant-baseline:central;fill:var(--black);
 }
 .spinbtn{
-  background:var(--white);color:var(--black);
+  background:var(--live);color:var(--live-ink);
   border:var(--edgew) solid var(--black);border-radius:999px;
   cursor:pointer;padding:14px 28px;
+  transition:background .5s ease,color .5s ease,transform .14s cubic-bezier(.3,1.5,.5,1),box-shadow .14s;
   font-family:var(--f-disp);font-weight:800;font-size:17px;
   text-transform:uppercase;letter-spacing:-.02em;line-height:1;
   box-shadow:var(--pop-black);
@@ -357,6 +373,7 @@ img{max-width:100%;display:block}
 @media(min-width:620px){.node .nmeta{display:block}}
 .node.on{border-color:var(--black);box-shadow:6px 7px 0 var(--black);transform:translateX(5px)}
 .node.on .mhub{fill:var(--white)}
+.node.on .petal{fill:var(--white)}
 .node.on .nsans,.node.on .nmeta{opacity:.85}
 
 /* ---------- process ---------- */
@@ -513,6 +530,48 @@ img{max-width:100%;display:block}
 .foot-bot span{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
 .foot-bot .hi{font-family:var(--f-pop);font-size:15px;letter-spacing:0;text-transform:none;opacity:.8;color:var(--lime)}
 
+/* ---------- kundalini rail ---------- */
+.kundalini{
+  position:fixed;left:24px;top:16vh;bottom:16vh;width:16px;z-index:60;
+  display:none;pointer-events:none;
+}
+@media(min-width:1180px){.kundalini{display:block}}
+.kline{
+  position:absolute;left:6px;top:0;bottom:0;width:4px;border-radius:4px;
+  background:var(--edge);opacity:.16;overflow:hidden;
+}
+.kfill{
+  position:absolute;left:0;top:0;width:100%;height:0%;border-radius:4px;
+  background:var(--live);transition:height .18s linear,background .5s ease;
+}
+.kdot{
+  position:absolute;left:0;width:16px;height:16px;border-radius:999px;
+  background:var(--bg);border:2.5px solid var(--edge);
+  transform:translateY(-50%) scale(.62);
+  transition:transform .35s cubic-bezier(.3,1.6,.4,1),background .35s,border-color .35s;
+}
+.kdot.lit{transform:translateY(-50%) scale(1);border-color:var(--black)}
+.kdot.now{transform:translateY(-50%) scale(1.42)}
+.krail-cap{
+  position:absolute;left:1px;font-family:var(--f-mono);font-size:8px;font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--fg);opacity:.35;
+  writing-mode:vertical-rl;
+}
+.krail-cap.top{top:-58px}
+.krail-cap.bot{bottom:-64px}
+
+/* ---------- hand-drawn marks ---------- */
+.doodle{position:absolute;pointer-events:none;display:none;z-index:3}
+@media(min-width:1000px){.doodle{display:block}}
+.doodle svg{width:100%;height:100%;overflow:visible}
+.doodle path,.doodle line{fill:none;stroke:var(--fg);stroke-width:2.6;
+  stroke-linecap:round;stroke-linejoin:round;opacity:.72}
+.doodle span{
+  font-family:var(--f-pop);font-weight:700;font-size:17px;
+  color:var(--fg);opacity:.75;white-space:nowrap;display:block;
+}
+.d-spin{left:0;bottom:1%;width:168px;transform:rotate(-5deg)}
+
 /* ---------- cursor chakra ---------- */
 .cursor{
   position:fixed;left:0;top:0;width:26px;height:26px;z-index:9998;
@@ -536,6 +595,12 @@ img{max-width:100%;display:block}
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
+<div class="kundalini" aria-hidden="true">
+  <span class="krail-cap top">sahasrara</span>
+  <div class="kline"><div class="kfill" id="kfill"></div></div>
+  <div id="kdots"></div>
+  <span class="krail-cap bot">muladhara</span>
+</div>
 <div class="cursor" id="cursor" aria-hidden="true">
   <svg viewBox="0 0 40 40">
     <circle cx="20" cy="20" r="17" fill="#FF3DA5" stroke="#121110" stroke-width="3"/>
@@ -600,11 +665,18 @@ img{max-width:100%;display:block}
         </div>
       </div>
 
-      <div class="wheel-side">
+      <div class="wheel-side" style="position:relative">
+        <div class="doodle d-spin">
+          <span>isko ghumao</span>
+          <svg viewBox="0 0 168 46" aria-hidden="true">
+            <path d="M10 8 C 46 34, 104 40, 148 28"/>
+            <path d="M136 18 L149 28 L134 36"/>
+          </svg>
+        </div>
         <div class="wheelbox">
           <svg viewBox="0 0 400 400" id="mandala" role="img"
                aria-label="Chakra mandala. Spin it to land on a discipline.">
-            <g id="mandalaRot"><g id="petals"></g></g>
+            <g id="ambient"><g id="mandalaRot"><g id="petals"></g></g></g>
             <circle class="mhub" cx="200" cy="200" r="92"/>
             <g id="yantra"></g>
           </svg>
@@ -1109,10 +1181,11 @@ img{max-width:100%;display:block}
     var c4 = P(cx,cy, r0 + (r1-r0)*0.42, mid + half*0.95);
     return "M"+f(b1)+" C"+f(c1)+" "+f(c2)+" "+f(tip)+" C"+f(c3)+" "+f(c4)+" "+f(b2)+" Z";
   }
-  function petalRing(cx, cy, c, r0, r1, sw){
+  function petalRing(cx, cy, c, r0, r1, sw, stagger){
     var out = "";
     for (var i=0;i<c.petals;i++){
-      out += '<path class="petal" fill="'+c.col+'" stroke-width="'+sw+'" d="'+
+      var d = stagger ? ' style="animation-delay:'+(i*Math.min(38, 420/c.petals)).toFixed(0)+'ms"' : '';
+      out += '<path class="petal" fill="'+c.col+'" stroke-width="'+sw+'"'+d+' d="'+
              petalPath(cx,cy,c.petals,i,r0,r1)+'"/>';
     }
     return out;
@@ -1158,7 +1231,7 @@ img{max-width:100%;display:block}
   var rot = 0, spinning = false, active = -1;
 
   function paintMandala(c){
-    petalsG.innerHTML = petalRing(200,200,c,88,188,2.5);
+    petalsG.innerHTML = petalRing(200,200,c,88,188,2.5,true);
     yantraG.innerHTML = yantra(200,200,c,52,3) +
       (c.bija ? '<text class="bija" x="200" y="204">'+c.bija+'</text>' : '');
   }
@@ -1167,6 +1240,9 @@ img{max-width:100%;display:block}
     active = i;
     var c = CHAKRAS[i];
     paintMandala(c);
+    root.style.setProperty("--live", c.col);
+    root.style.setProperty("--live-ink", c.ink);
+    if (kfill) kfill.style.background = c.col;
     resultEl.innerHTML =
       '<div class="rleft">'+
         '<div class="rtop">'+
@@ -1269,17 +1345,14 @@ img{max-width:100%;display:block}
       tags:["web","ui","design system"] }
   ];
 
+  /* each project gets its own lotus, so the work grid speaks the same language */
+  var PLATE_SHAPES = ["tri","hex","crescent","circle","tri-circle","square-tri"];
   function plate(col, seed){
-    var s = '', n = 6 + (seed % 5);
-    for (var i=0;i<n;i++){
-      var a = i*(360/n) + seed*7;
-      var rad = a*Math.PI/180;
-      s += '<line x1="60" y1="60" x2="'+(60+Math.cos(rad)*52).toFixed(1)+'" y2="'+(60+Math.sin(rad)*52).toFixed(1)+
-           '" stroke="#121110" stroke-width="5" stroke-linecap="round"/>';
-    }
-    return '<svg viewBox="0 0 120 120" aria-hidden="true">'+
-             '<circle cx="60" cy="60" r="55" fill="'+col+'" stroke="#121110" stroke-width="5"/>'+ s +
-             '<circle cx="60" cy="60" r="13" fill="#FFFDF5" stroke="#121110" stroke-width="5"/>'+
+    var c = { petals: [6,8,10,12,16][seed % 5], col: "#FFFDF5", yantra: PLATE_SHAPES[seed % 6] };
+    return '<svg viewBox="0 0 100 100" aria-hidden="true">'+
+             petalRing(50,50,c,26,48,2.4)+
+             '<circle class="mhub" cx="50" cy="50" r="24" stroke-width="2.4"/>'+
+             yantra(50,50,c,13,2.4)+
            '</svg>';
   }
 
@@ -1311,6 +1384,33 @@ img{max-width:100%;display:block}
     });
   });
 
+  /* ---------- kundalini rail ---------- */
+  var kfill = document.getElementById("kfill");
+  var kdots = document.getElementById("kdots");
+  var dotEls = [];
+  if (kdots){
+    kdots.innerHTML = CHAKRAS.map(function(c,i){
+      /* index 0 (muladhara) sits at the bottom: energy rises */
+      var top = (100 - (i/(N-1))*100);
+      return '<span class="kdot" style="top:'+top.toFixed(1)+'%"></span>';
+    }).join("");
+    dotEls = Array.prototype.slice.call(kdots.children);
+  }
+  function kundalini(){
+    if (!kfill) return;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var pr  = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    kfill.style.height = (pr*100).toFixed(1) + "%";
+    var reached = Math.round(pr * (N-1));
+    dotEls.forEach(function(d,i){
+      /* dot i is chakra i, muladhara at the bottom: energy rises from the root */
+      var idx = i;
+      d.classList.toggle("lit", idx <= reached);
+      d.classList.toggle("now", idx === reached);
+      d.style.background = idx <= reached ? CHAKRAS[idx].col : "";
+    });
+  }
+
   /* ---------- reveal (no rAF dependency) ---------- */
   var pending = Array.prototype.slice.call(document.querySelectorAll(".rv"));
   function checkReveal(){
@@ -1325,11 +1425,11 @@ img{max-width:100%;display:block}
     pending.forEach(function(el){ el.classList.add("in"); });
     pending = [];
   } else {
-    window.addEventListener("scroll", checkReveal, {passive:true});
-    window.addEventListener("resize", checkReveal, {passive:true});
-    checkReveal();
-    setTimeout(checkReveal, 320);
-    setTimeout(checkReveal, 1300);
+    window.addEventListener("scroll", function(){ checkReveal(); kundalini(); }, {passive:true});
+    window.addEventListener("resize", function(){ checkReveal(); kundalini(); }, {passive:true});
+    checkReveal(); kundalini();
+    setTimeout(function(){ checkReveal(); kundalini(); }, 320);
+    setTimeout(function(){ checkReveal(); kundalini(); }, 1300);
   }
 
   /* ---------- cursor chakra ---------- */
